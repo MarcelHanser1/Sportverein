@@ -69,7 +69,6 @@ public class TeamCompResultPOJO {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(_teamCompResultId, _points, _compId, _teamId);
     }
 

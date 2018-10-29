@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public class LineUpPersonPOJOPK implements Serializable {
     private int _personId;
-    private int _encId;
+    private int _compId;
 
     @Column(name = "personID")
     @Id
@@ -19,14 +19,14 @@ public class LineUpPersonPOJOPK implements Serializable {
         _personId = personId;
     }
 
-    @Column(name = "encID")
+    @Column(name = "compID")
     @Id
-    public int getEncId() {
-        return _encId;
+    public int getCompId() {
+        return _compId;
     }
 
-    public void setEncId(int encId) {
-        _encId = encId;
+    public void setCompId(int compId) {
+        _compId = compId;
     }
 
     @Override
@@ -35,12 +35,11 @@ public class LineUpPersonPOJOPK implements Serializable {
         if (o == null || getClass() != o.getClass()) return false;
         LineUpPersonPOJOPK that = (LineUpPersonPOJOPK) o;
         return _personId == that._personId &&
-                _encId == that._encId;
+                _compId == that._compId;
     }
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(_personId, _encId);
+        return Objects.hash(_personId, _compId);
     }
 }

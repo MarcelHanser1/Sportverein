@@ -58,7 +58,6 @@ public class DepartmentPOJO {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(_deptName, _deptId, _headOfDeptId);
     }
 

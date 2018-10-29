@@ -1,7 +1,6 @@
 package persistence.pojo;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 import static javax.persistence.GenerationType.IDENTITY;
@@ -16,7 +15,6 @@ public class EncounterPOJO {
     private ResultPOJO _resultByResultId;
     private TeamPOJO _teamByTeam1Id;
     private TeamPOJO _teamByTeam2Id;
-    private Collection<LineUpPersonPOJO> _lineUpPeopleByEncounterId;
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -72,7 +70,6 @@ public class EncounterPOJO {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(_encounterId, _resultId, _team1Id, _team2Id);
     }
 
@@ -104,14 +101,5 @@ public class EncounterPOJO {
 
     public void setTeamByTeam2Id(TeamPOJO teamByTeam2Id) {
         _teamByTeam2Id = teamByTeam2Id;
-    }
-
-    @OneToMany(mappedBy = "encounterByEncId")
-    public Collection<LineUpPersonPOJO> getLineUpPeopleByEncounterId() {
-        return _lineUpPeopleByEncounterId;
-    }
-
-    public void setLineUpPeopleByEncounterId(Collection<LineUpPersonPOJO> lineUpPeopleByEncounterId) {
-        _lineUpPeopleByEncounterId = lineUpPeopleByEncounterId;
     }
 }

@@ -1,6 +1,5 @@
 package persistence.dao;
 
-import persistence.dao.BaseDAO;
 import persistence.pojo.PersonPOJO;
 
 public class PersonDAO extends BaseDAO<PersonPOJO, Integer> {

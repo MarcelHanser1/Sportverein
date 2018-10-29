@@ -40,7 +40,6 @@ public class CompetitionTeamPOJOPK implements Serializable {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(_compId, _teamId);
     }
 }

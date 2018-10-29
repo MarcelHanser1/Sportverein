@@ -40,7 +40,6 @@ public class PersonTeamPOJOPK implements Serializable {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(_personId, _teamId);
     }
 }

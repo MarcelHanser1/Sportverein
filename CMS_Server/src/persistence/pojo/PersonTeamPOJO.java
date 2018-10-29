@@ -43,12 +43,11 @@ public class PersonTeamPOJO {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(_personId, _teamId);
     }
 
     @ManyToOne
-    @JoinColumn(name = "personID", referencedColumnName = "personID", nullable = false, insertable=false, updatable = false)
+    @JoinColumn(name = "personID", referencedColumnName = "personID", nullable = false, insertable = false, updatable = false)
     public PersonPOJO getPersonByPersonId() {
         return _personByPersonId;
     }

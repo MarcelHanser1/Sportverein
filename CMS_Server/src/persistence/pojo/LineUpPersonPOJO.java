@@ -9,10 +9,10 @@ import java.util.Objects;
 public class LineUpPersonPOJO {
     private int _personId;
     private int _teamId;
-    private int _encId;
+    private int _compId;
     private PersonPOJO _personByPersonId;
     private InternalTeamPOJO _internalTeamByTeamId;
-    private EncounterPOJO _encounterByEncId;
+    private CompetitionPOJO _competitionByCompId;
 
     @Id
     @Column(name = "personID")
@@ -35,13 +35,13 @@ public class LineUpPersonPOJO {
     }
 
     @Id
-    @Column(name = "encID")
-    public int getEncId() {
-        return _encId;
+    @Column(name = "compID")
+    public int getCompId() {
+        return _compId;
     }
 
-    public void setEncId(int encId) {
-        _encId = encId;
+    public void setCompId(int compId) {
+        _compId = compId;
     }
 
     @Override
@@ -51,13 +51,12 @@ public class LineUpPersonPOJO {
         LineUpPersonPOJO that = (LineUpPersonPOJO) o;
         return _personId == that._personId &&
                 _teamId == that._teamId &&
-                _encId == that._encId;
+                _compId == that._compId;
     }
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(_personId, _teamId, _encId);
+        return Objects.hash(_personId, _teamId, _compId);
     }
 
     @ManyToOne
@@ -81,12 +80,12 @@ public class LineUpPersonPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "encID", referencedColumnName = "encounterID", nullable = false, insertable = false, updatable = false)
-    public EncounterPOJO getEncounterByEncId() {
-        return _encounterByEncId;
+    @JoinColumn(name = "compID", referencedColumnName = "compID", nullable = false, insertable = false, updatable = false)
+    public CompetitionPOJO getCompetitionByCompId() {
+        return _competitionByCompId;
     }
 
-    public void setEncounterByEncId(EncounterPOJO encounterByEncId) {
-        _encounterByEncId = encounterByEncId;
+    public void setCompetitionByCompId(CompetitionPOJO competitionByCompId) {
+        _competitionByCompId = competitionByCompId;
     }
 }

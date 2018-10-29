@@ -14,6 +14,8 @@ public class PersonPOJO {
     private String _firstName;
     private String _lastName;
     private Date _dateOfBirth;
+    private String _userId;
+    private String _socialSecurityNumber;
     private Collection<DepartmentPOJO> _departmentsByPersonId;
     private Collection<LineUpPersonPOJO> _lineUpPeopleByPersonId;
     private Collection<PersonTeamPOJO> _personTeamsByPersonId;
@@ -61,6 +63,26 @@ public class PersonPOJO {
         _dateOfBirth = dateOfBirth;
     }
 
+    @Basic
+    @Column(name = "UserID")
+    public String getUserId() {
+        return _userId;
+    }
+
+    public void setUserId(String userId) {
+        _userId = userId;
+    }
+
+    @Basic
+    @Column(name = "socialSecurityNumber")
+    public String getSocialSecurityNumber() {
+        return _socialSecurityNumber;
+    }
+
+    public void setSocialSecurityNumber(String socialSecurityNumber) {
+        _socialSecurityNumber = socialSecurityNumber;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -69,13 +91,14 @@ public class PersonPOJO {
         return _personId == that._personId &&
                 Objects.equals(_firstName, that._firstName) &&
                 Objects.equals(_lastName, that._lastName) &&
-                Objects.equals(_dateOfBirth, that._dateOfBirth);
+                Objects.equals(_dateOfBirth, that._dateOfBirth) &&
+                Objects.equals(_userId, that._userId) &&
+                Objects.equals(_socialSecurityNumber, that._socialSecurityNumber);
     }
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(_personId, _firstName, _lastName, _dateOfBirth);
+        return Objects.hash(_personId, _firstName, _lastName, _dateOfBirth, _userId, _socialSecurityNumber);
     }
 
     @OneToMany(mappedBy = "personByHeadOfDeptId")

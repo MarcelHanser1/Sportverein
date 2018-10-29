@@ -75,7 +75,6 @@ public class TeamPOJO {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(_teamId, _teamName, _sportId, _leagueId);
     }
 

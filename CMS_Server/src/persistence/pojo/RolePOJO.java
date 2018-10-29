@@ -45,7 +45,6 @@ public class RolePOJO {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(_roleId, _roleName);
     }
 

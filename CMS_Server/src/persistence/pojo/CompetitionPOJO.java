@@ -14,6 +14,7 @@ public class CompetitionPOJO {
     private String _location;
     private Date _startDate;
     private Collection<CompetitionTeamPOJO> _competitionTeamsByCompId;
+    private Collection<LineUpPersonPOJO> _lineUpPeopleByCompId;
     private Collection<TeamCompResultPOJO> _teamCompResultsByCompId;
 
     @Id
@@ -59,7 +60,6 @@ public class CompetitionPOJO {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(_compId, _location, _startDate);
     }
 
@@ -70,6 +70,15 @@ public class CompetitionPOJO {
 
     public void setCompetitionTeamsByCompId(Collection<CompetitionTeamPOJO> competitionTeamsByCompId) {
         _competitionTeamsByCompId = competitionTeamsByCompId;
+    }
+
+    @OneToMany(mappedBy = "competitionByCompId")
+    public Collection<LineUpPersonPOJO> getLineUpPeopleByCompId() {
+        return _lineUpPeopleByCompId;
+    }
+
+    public void setLineUpPeopleByCompId(Collection<LineUpPersonPOJO> lineUpPeopleByCompId) {
+        _lineUpPeopleByCompId = lineUpPeopleByCompId;
     }
 
     @OneToMany(mappedBy = "competitionByCompId")

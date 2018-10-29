@@ -45,7 +45,6 @@ public class InternalTeamPOJO {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(_trainerId, _teamId);
     }
 

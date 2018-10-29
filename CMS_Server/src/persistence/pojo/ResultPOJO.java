@@ -57,7 +57,6 @@ public class ResultPOJO {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(_resultId, _pointsTeam1, _pointsTeam2);
     }
 

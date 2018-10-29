@@ -1,15 +1,14 @@
 package persistence.dao;
 
-import java.io.Serializable;
-import java.util.List;
-
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import persistence.HibernateUtil;
+
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import java.io.Serializable;
+import java.util.List;
 
 
 public class BaseDAO<T, PK extends Serializable> {
