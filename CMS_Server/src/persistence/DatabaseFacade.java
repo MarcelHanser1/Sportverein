@@ -18,7 +18,7 @@ public class DatabaseFacade {
 		return dao.getAll();
 	}
 
-	public void insert(PersonPOJO person) {
+	public void insertPerson (PersonPOJO person) {
 		PersonDAO.getInstance().insert(person);
 	}
 }

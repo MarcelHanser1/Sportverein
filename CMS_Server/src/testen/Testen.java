@@ -1,25 +1,20 @@
 package testen;
 
-import persistence.DatabaseFacade;
-import persistence.pojo.PersonPOJO;
+import application.DatabasePerson;
+import domain.interfaces.Iperson;
 
 import java.util.List;
 
 public class Testen {
     public static void main(String[] args) {
-        DatabaseFacade dbf = new DatabaseFacade();
-
-//        PersonPOJO person = new PersonPOJO();
-//        person.setFirstName("Simone");
-//        person.setLastName("Kirchinger");
-//        person.setDateOfBirth(new Date(12-12-1992));
-//        dbf.insert(person);
-
-        List<PersonPOJO> allPersons = dbf.listAllPersons();
-        for (PersonPOJO pers:allPersons) {
-            System.out.println(pers.getFirstName());
-            System.out.println(pers.getLastName());
-            System.out.println(pers.getDateOfBirth() + "\n");
+        DatabasePerson databasePerson = new DatabasePerson();
+        List<Iperson> ipersonList = databasePerson.getAllPersons();
+        for (Iperson person:ipersonList) {
+            System.out.println("First Name: \t" + person.getFirstName());
+            System.out.println("Last Name: \t\t" + person.getLastName());
+            System.out.println("Date of birth: \t" + person.getDateOfBirth());
+            System.out.println("UserID: \t\t" + person.getUserId());
+            System.out.println("SSN: \t\t\t" + person.getSocialSecurityNumber() + "\n");
         }
     }
 }
