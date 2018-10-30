@@ -1,15 +1,15 @@
 package testen;
 
-import application.DatabasePerson;
 import domain.interfaces.Iperson;
+import persistence.DatabaseFacade;
 
 import java.util.List;
 
 public class Testen {
     public static void main(String[] args) {
-        DatabasePerson databasePerson = new DatabasePerson();
-        List<Iperson> ipersonList = databasePerson.getAllPersons();
-        for (Iperson person:ipersonList) {
+        DatabaseFacade databaseFacade = new DatabaseFacade();
+        List<Iperson> personList = databaseFacade.listAllIpersons();
+        for (Iperson person: personList) {
             System.out.println("First Name: \t" + person.getFirstName());
             System.out.println("Last Name: \t\t" + person.getLastName());
             System.out.println("Date of birth: \t" + person.getDateOfBirth());
