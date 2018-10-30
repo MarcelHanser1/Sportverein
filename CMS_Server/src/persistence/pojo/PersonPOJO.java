@@ -64,7 +64,7 @@ public class PersonPOJO {
     }
 
     @Basic
-    @Column(name = "UserID")
+    @Column(name = "userID")
     public String getUserId() {
         return _userId;
     }
