@@ -4,8 +4,6 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
 
-import static javax.persistence.GenerationType.IDENTITY;
-
 @Entity
 @Table(name = "Result", schema = "dbo", catalog = "Vereinsdatenbank")
 public class ResultPOJO {
@@ -15,7 +13,6 @@ public class ResultPOJO {
     private Collection<EncounterPOJO> _encountersByResultId;
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
     @Column(name = "resultID")
     public int getResultId() {
         return _resultId;

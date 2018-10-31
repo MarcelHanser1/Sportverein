@@ -1,8 +1,10 @@
 package domain.classes;
 
 import domain.interfaces.Iperson;
+import persistence.pojo.InternalTeamPOJO;
 
 import java.sql.Date;
+import java.util.Collection;
 
 public class Person implements Iperson {
     private String _firstName;
@@ -10,6 +12,16 @@ public class Person implements Iperson {
     private Date _dateOfBirth;
     private String _userId;
     private String _socialSecurityNumber;
+
+    public Collection<InternalTeamPOJO> getInternalTeamsByPersonId() {
+        return _internalTeamsByPersonId;
+    }
+
+    public void setInternalTeamsByPersonId(Collection<InternalTeamPOJO> internalTeamsByPersonId) {
+        _internalTeamsByPersonId = internalTeamsByPersonId;
+    }
+
+    private Collection<InternalTeamPOJO> _internalTeamsByPersonId;
 
 
     public Person() {
@@ -22,6 +34,7 @@ public class Person implements Iperson {
         _dateOfBirth = dateOfBirth;
         _userId = userId;
         _socialSecurityNumber = socialSecurityNumber;
+
     }
 
     @Override

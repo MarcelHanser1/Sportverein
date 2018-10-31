@@ -5,8 +5,6 @@ import java.sql.Date;
 import java.util.Collection;
 import java.util.Objects;
 
-import static javax.persistence.GenerationType.IDENTITY;
-
 @Entity
 @Table(name = "Competition", schema = "dbo", catalog = "Vereinsdatenbank")
 public class CompetitionPOJO {
@@ -18,7 +16,6 @@ public class CompetitionPOJO {
     private Collection<TeamCompResultPOJO> _teamCompResultsByCompId;
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
     @Column(name = "compID")
     public int getCompId() {
         return _compId;

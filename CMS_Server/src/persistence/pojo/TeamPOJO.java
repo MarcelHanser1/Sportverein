@@ -4,8 +4,6 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
 
-import static javax.persistence.GenerationType.IDENTITY;
-
 @Entity
 @Table(name = "Team", schema = "dbo", catalog = "Vereinsdatenbank")
 public class TeamPOJO {
@@ -22,7 +20,6 @@ public class TeamPOJO {
     private InternalTeamPOJO _internalTeamByTeamId;
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
     @Column(name = "teamID")
     public int getTeamId() {
         return _teamId;

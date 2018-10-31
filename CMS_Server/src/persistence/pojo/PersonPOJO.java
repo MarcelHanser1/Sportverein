@@ -5,8 +5,6 @@ import java.sql.Date;
 import java.util.Collection;
 import java.util.Objects;
 
-import static javax.persistence.GenerationType.IDENTITY;
-
 @Entity
 @Table(name = "Person", schema = "dbo", catalog = "Vereinsdatenbank")
 public class PersonPOJO {
@@ -23,7 +21,6 @@ public class PersonPOJO {
     private Collection<InternalTeamPOJO> _internalTeamsByPersonId;
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
     @Column(name = "personID")
     public int getPersonId() {
         return _personId;
@@ -119,7 +116,7 @@ public class PersonPOJO {
         _lineUpPeopleByPersonId = lineUpPeopleByPersonId;
     }
 
-    @OneToMany(mappedBy = "personByPersonId")
+    @OneToMany(mappedBy = "personByPersonId", fetch = FetchType.EAGER)
     public Collection<PersonTeamPOJO> getPersonTeamsByPersonId() {
         return _personTeamsByPersonId;
     }
