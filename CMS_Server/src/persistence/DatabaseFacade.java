@@ -35,12 +35,9 @@ public class DatabaseFacade {
 //	}
 
 	public void insertPerson (Iperson iPerson) {
-		PersonPOJO PersonPOJO = new PersonPOJO();
-		PersonPOJO.setFirstName(iPerson.getFirstName());
-		PersonPOJO.setLastName(iPerson.getLastName());
-		PersonPOJO.setDateOfBirth(iPerson.getDateOfBirth());
-		PersonPOJO.setUserId(iPerson.getUserId());
-		PersonPOJO.setSocialSecurityNumber(iPerson.getSocialSecurityNumber());
-		PersonDAO.getInstance().insert(PersonPOJO);
+		PersonPOJO personPOJO = new PersonPOJO();
+		ObjectMapperUtils.map(iPerson, personPOJO);
+		PersonDAO dao = PersonDAO.getInstance();
+		dao.insert(personPOJO);
 	}
 }
