@@ -1,9 +1,9 @@
 package persistence;
 
-import domain.classes.Person;
-import domain.interfaces.Iperson;
-import persistence.dao.PersonDAO;
-import persistence.pojo.PersonPOJO;
+import domain.classes.*;
+import domain.interfaces.*;
+import persistence.dao.*;
+import persistence.pojo.*;
 import utilities.ObjectMapperUtils;
 
 import java.util.List;
@@ -40,4 +40,20 @@ public class DatabaseFacade {
 		PersonDAO dao = PersonDAO.getInstance();
 		dao.insert(personPOJO);
 	}
+
+	public List<Competition> listAllcompetitions(){
+		CompetitionDAO dao = CompetitionDAO.getInstance();
+		List<CompetitionPOJO> competitions = dao.getAll();
+		return ObjectMapperUtils.mapAll(competitions, Competition.class);
+	}
+
+	// probably not working ...
+	public void InsertCompetition(Icompetition iCompetition){
+		CompetitionPOJO competitionPOJO = new CompetitionPOJO();
+		ObjectMapperUtils.map(iCompetition, competitionPOJO);
+		CompetitionDAO dao = CompetitionDAO.getInstance();
+		dao.insert(competitionPOJO);
+	}
+
+
 }
