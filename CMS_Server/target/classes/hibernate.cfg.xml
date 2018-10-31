@@ -6,9 +6,9 @@
   <session-factory>
     <property name="connection.url">jdbc:sqlserver://vereinsserver.database.windows.net:1433;database=Vereinsdatenbank</property>
     <property name="connection.autocommit">true</property>
-    <property name="hibernate.connection.username">adminroot@vereinsserver</property>
-    <property name="hibernate.connection.password">Password1</property>
     <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    <property name="hibernate.connection.username">adminroot</property>
+    <property name="hibernate.connection.password">Password1</property>
     <mapping class="persistence.pojo.CompetitionPOJO"/>
     <mapping class="persistence.pojo.CompetitionTeamPOJO"/>
     <mapping class="persistence.pojo.DepartmentPOJO"/>

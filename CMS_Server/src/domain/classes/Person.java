@@ -13,15 +13,15 @@ public class Person implements Iperson {
     private String _userId;
     private String _socialSecurityNumber;
 
-    public Collection<InternalTeamPOJO> getInternalTeamsByPersonId() {
-        return _internalTeamsByPersonId;
-    }
-
-    public void setInternalTeamsByPersonId(Collection<InternalTeamPOJO> internalTeamsByPersonId) {
-        _internalTeamsByPersonId = internalTeamsByPersonId;
-    }
-
-    private Collection<InternalTeamPOJO> _internalTeamsByPersonId;
+//    public Collection<InternalTeamPOJO> getInternalTeamsByPersonId() {
+//        return _internalTeamsByPersonId;
+//    }
+//
+//    public void setInternalTeamsByPersonId(Collection<InternalTeamPOJO> internalTeamsByPersonId) {
+//        _internalTeamsByPersonId = internalTeamsByPersonId;
+//    }
+//
+//    private Collection<InternalTeamPOJO> _internalTeamsByPersonId;
 
 
     public Person() {

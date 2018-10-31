@@ -14,10 +14,8 @@ public class DatabaseFacade {
 	public List<Person> listAllpersons() {
 		PersonDAO dao = PersonDAO.getInstance();
 		List<PersonPOJO> persons = dao.getAll();
-		System.out.println(persons.get(0).getPersonTeamsByPersonId());
 		return ObjectMapperUtils.mapAll(persons, Person.class);
 	}
-
 
 
 //	public List<Iperson> listAllIpersons() {

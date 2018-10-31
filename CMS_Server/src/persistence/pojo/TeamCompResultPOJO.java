@@ -70,7 +70,7 @@ public class TeamCompResultPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "compID", referencedColumnName = "compID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "compID", referencedColumnName = "compID", nullable = false, updatable = false, insertable = false)
     public CompetitionPOJO getCompetitionByCompId() {
         return _competitionByCompId;
     }
@@ -80,7 +80,7 @@ public class TeamCompResultPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "teamID", referencedColumnName = "teamID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "teamID", referencedColumnName = "teamID", nullable = false, updatable = false, insertable = false)
     public TeamPOJO getTeamByTeamId() {
         return _teamByTeamId;
     }

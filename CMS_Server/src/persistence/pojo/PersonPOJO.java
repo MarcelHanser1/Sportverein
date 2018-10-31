@@ -116,7 +116,8 @@ public class PersonPOJO {
         _lineUpPeopleByPersonId = lineUpPeopleByPersonId;
     }
 
-    @OneToMany(mappedBy = "personByPersonId", fetch = FetchType.EAGER)
+//    @OneToMany(mappedBy = "personByPersonId", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "personByPersonId")
     public Collection<PersonTeamPOJO> getPersonTeamsByPersonId() {
         return _personTeamsByPersonId;
     }

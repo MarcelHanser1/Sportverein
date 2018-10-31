@@ -47,7 +47,7 @@ public class RolePersonPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "roleID", referencedColumnName = "roleID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "roleID", referencedColumnName = "roleID", nullable = false, updatable = false, insertable = false)
     public RolePOJO getRoleByRoleId() {
         return _roleByRoleId;
     }
@@ -57,7 +57,7 @@ public class RolePersonPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "personID", referencedColumnName = "personID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "personID", referencedColumnName = "personID", nullable = false, updatable = false, insertable = false)
     public PersonPOJO getPersonByPersonId() {
         return _personByPersonId;
     }

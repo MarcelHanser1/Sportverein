@@ -60,7 +60,7 @@ public class LineUpPersonPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "personID", referencedColumnName = "personID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "personID", referencedColumnName = "personID", nullable = false, updatable = false, insertable = false)
     public PersonPOJO getPersonByPersonId() {
         return _personByPersonId;
     }
@@ -70,7 +70,7 @@ public class LineUpPersonPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "teamID", referencedColumnName = "teamID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "teamID", referencedColumnName = "teamID", nullable = false, updatable = false, insertable = false)
     public InternalTeamPOJO getInternalTeamByTeamId() {
         return _internalTeamByTeamId;
     }
@@ -80,7 +80,7 @@ public class LineUpPersonPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "compID", referencedColumnName = "compID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "compID", referencedColumnName = "compID", nullable = false, updatable = false, insertable = false)
     public CompetitionPOJO getCompetitionByCompId() {
         return _competitionByCompId;
     }

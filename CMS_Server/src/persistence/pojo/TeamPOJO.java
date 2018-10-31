@@ -8,7 +8,7 @@ import java.util.Objects;
 @Table(name = "Team", schema = "dbo", catalog = "Vereinsdatenbank")
 public class TeamPOJO {
     private int _teamId;
-    private int _teamName;
+    private String _teamName;
     private int _sportId;
     private int _leagueId;
     private Collection<CompetitionTeamPOJO> _competitionTeamsByTeamId;
@@ -31,11 +31,11 @@ public class TeamPOJO {
 
     @Basic
     @Column(name = "teamName")
-    public int getTeamName() {
+    public String getTeamName() {
         return _teamName;
     }
 
-    public void setTeamName(int teamName) {
+    public void setTeamName(String teamName) {
         _teamName = teamName;
     }
 
@@ -65,9 +65,9 @@ public class TeamPOJO {
         if (o == null || getClass() != o.getClass()) return false;
         TeamPOJO teamPOJO = (TeamPOJO) o;
         return _teamId == teamPOJO._teamId &&
-                _teamName == teamPOJO._teamName &&
                 _sportId == teamPOJO._sportId &&
-                _leagueId == teamPOJO._leagueId;
+                _leagueId == teamPOJO._leagueId &&
+                Objects.equals(_teamName, teamPOJO._teamName);
     }
 
     @Override
@@ -103,7 +103,7 @@ public class TeamPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "sportID", referencedColumnName = "sportID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "sportID", referencedColumnName = "sportID", nullable = false, updatable = false, insertable = false)
     public SportPOJO getSportBySportId() {
         return _sportBySportId;
     }
@@ -113,7 +113,7 @@ public class TeamPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "leagueID", referencedColumnName = "leagueID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "leagueID", referencedColumnName = "leagueID", nullable = false, updatable = false, insertable = false)
     public LeaguePOJO getLeagueByLeagueId() {
         return _leagueByLeagueId;
     }

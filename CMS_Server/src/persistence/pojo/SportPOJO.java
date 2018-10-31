@@ -8,7 +8,7 @@ import java.util.Objects;
 @Table(name = "Sport", schema = "dbo", catalog = "Vereinsdatenbank")
 public class SportPOJO {
     private int _sportId;
-    private int _sportName;
+    private String _sportName;
     private int _deptId;
     private DepartmentPOJO _departmentByDeptId;
     private Collection<TeamPOJO> _teamsBySportId;
@@ -25,11 +25,11 @@ public class SportPOJO {
 
     @Basic
     @Column(name = "sportName")
-    public int getSportName() {
+    public String getSportName() {
         return _sportName;
     }
 
-    public void setSportName(int sportName) {
+    public void setSportName(String sportName) {
         _sportName = sportName;
     }
 
@@ -49,8 +49,8 @@ public class SportPOJO {
         if (o == null || getClass() != o.getClass()) return false;
         SportPOJO sportPOJO = (SportPOJO) o;
         return _sportId == sportPOJO._sportId &&
-                _sportName == sportPOJO._sportName &&
-                _deptId == sportPOJO._deptId;
+                _deptId == sportPOJO._deptId &&
+                Objects.equals(_sportName, sportPOJO._sportName);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class SportPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "deptID", referencedColumnName = "deptID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "deptID", referencedColumnName = "deptID", nullable = false, updatable = false, insertable = false)
     public DepartmentPOJO getDepartmentByDeptId() {
         return _departmentByDeptId;
     }

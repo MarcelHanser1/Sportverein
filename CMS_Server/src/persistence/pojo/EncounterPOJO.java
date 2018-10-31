@@ -71,7 +71,7 @@ public class EncounterPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "resultID", referencedColumnName = "resultID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "resultID", referencedColumnName = "resultID", nullable = false, updatable = false, insertable = false)
     public ResultPOJO getResultByResultId() {
         return _resultByResultId;
     }
@@ -81,7 +81,7 @@ public class EncounterPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "team1ID", referencedColumnName = "teamID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "team1ID", referencedColumnName = "teamID", nullable = false, updatable = false, insertable = false)
     public TeamPOJO getTeamByTeam1Id() {
         return _teamByTeam1Id;
     }
@@ -91,7 +91,7 @@ public class EncounterPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "team2ID", referencedColumnName = "teamID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "team2ID", referencedColumnName = "teamID", nullable = false, updatable = false, insertable = false)
     public TeamPOJO getTeamByTeam2Id() {
         return _teamByTeam2Id;
     }

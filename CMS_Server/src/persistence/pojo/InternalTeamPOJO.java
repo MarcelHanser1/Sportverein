@@ -67,7 +67,7 @@ public class InternalTeamPOJO {
     }
 
     @ManyToOne
-    @JoinColumn(name = "trainerID", referencedColumnName = "personID", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "trainerID", referencedColumnName = "personID", nullable = false, updatable = false, insertable = false)
     public PersonPOJO getPersonByTrainerId() {
         return _personByTrainerId;
     }
