@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "internalTeam", schema = "dbo", catalog = "Vereinsdatenbank")
+@Table(name = "InternalTeam", schema = "dbo", catalog = "Vereinsdatenbank")
 public class InternalTeamPOJO {
     private int _trainerId;
     private int _teamId;

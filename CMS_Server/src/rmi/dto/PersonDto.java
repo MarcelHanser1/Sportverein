@@ -1,10 +1,10 @@
-package domain.classes;
+package rmi.dto;
 
 import domain.interfaces.Iperson;
 
 import java.sql.Date;
 
-public class Person implements Iperson {
+public class PersonDto implements Iperson {
     private String _firstName;
     private String _lastName;
     private Date _dateOfBirth;
@@ -22,11 +22,11 @@ public class Person implements Iperson {
 //    private Collection<InternalTeamPOJO> _internalTeamsByPersonId;
 
 
-    public Person() {
+    public PersonDto() {
 
     }
 
-    public Person(String firstName, String lastName, Date dateOfBirth, String userId, String socialSecurityNumber) {
+    public PersonDto(String firstName, String lastName, Date dateOfBirth, String userId, String socialSecurityNumber) {
         _firstName = firstName;
         _lastName = lastName;
         _dateOfBirth = dateOfBirth;

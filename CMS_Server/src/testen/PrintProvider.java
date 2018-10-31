@@ -19,7 +19,7 @@ public class PrintProvider {
     public void printPerson(Person targetPerson){
 
         if(targetPerson == null){
-            System.out.println("Person data not available!");
+            System.out.println("PersonDto data not available!");
         } else {
             System.out.println("First Name: \t" + targetPerson.getFirstName());
             System.out.println("Last Name: \t\t" + targetPerson.getLastName());
@@ -31,7 +31,7 @@ public class PrintProvider {
 
     public void printPersonInterface(Iperson targetPersonInterface){
         if(targetPersonInterface == null){
-            System.out.println("Person data not available!");
+            System.out.println("PersonDto data not available!");
         } else {
             System.out.println("First Name: \t" + targetPersonInterface.getFirstName());
             System.out.println("Last Name: \t\t" + targetPersonInterface.getLastName());
