@@ -16,7 +16,8 @@ public class CompetitionPOJO {
     private Collection<TeamCompResultPOJO> _teamCompResultsByCompId;
 
     @Id
-    @GeneratedValue
+    // @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "compID")
     public int getCompId() {
         return _compId;

@@ -2,7 +2,6 @@ package testen;
 
 import domain.classes.Competition;
 import domain.classes.Person;
-import domain.interfaces.Icompetition;
 import domain.interfaces.Iperson;
 
 public class PrintProvider {
@@ -19,7 +18,7 @@ public class PrintProvider {
     public void printPerson(Person targetPerson){
 
         if(targetPerson == null){
-            System.out.println("PersonDto data not available!");
+            System.out.println("PersonDTO data not available!");
         } else {
             System.out.println("First Name: \t" + targetPerson.getFirstName());
             System.out.println("Last Name: \t\t" + targetPerson.getLastName());
@@ -31,7 +30,7 @@ public class PrintProvider {
 
     public void printPersonInterface(Iperson targetPersonInterface){
         if(targetPersonInterface == null){
-            System.out.println("PersonDto data not available!");
+            System.out.println("PersonDTO data not available!");
         } else {
             System.out.println("First Name: \t" + targetPersonInterface.getFirstName());
             System.out.println("Last Name: \t\t" + targetPersonInterface.getLastName());

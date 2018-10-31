@@ -11,7 +11,7 @@ import java.util.List;
 
 public class DatabaseFacade {
 
-	// PersonDto
+	// PersonDTO
 	public List<Person> listAllpersons() {
 		PersonDAO dao = PersonDAO.getInstance();
 		List<PersonPOJO> persons = dao.getAll();
@@ -34,7 +34,7 @@ public class DatabaseFacade {
 //		List<Iperson> iPersonList = new LinkedList<>();
 //		List<PersonPOJO> PersonPOJOList = dao.getAll();
 //		for (PersonPOJO personPOJO:PersonPOJOList) {
-//			Iperson iPerson = new PersonDto();
+//			Iperson iPerson = new PersonDTO();
 //			iPerson.setDateOfBirth(personPOJO.getDateOfBirth());
 //			iPerson.setFirstName(personPOJO.getFirstName());
 //			iPerson.setLastName(personPOJO.getLastName());
