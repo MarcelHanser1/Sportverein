@@ -4,6 +4,7 @@ import domain.classes.Person;
 import domain.interfaces.Iperson;
 import persistence.DatabaseFacade;
 
+import java.util.Date;
 import java.util.List;
 
 public class Testen {
@@ -19,12 +20,12 @@ public class Testen {
             System.out.println("SSN: \t\t\t" + iPerson.getSocialSecurityNumber() + "\n");
         }
 
+
+        databaseFacade.insertPerson(new Person("Gilbert","Moser",
+                new java.sql.Date(new Date(1985, 1, 1).getTime()),
+                "GilbMos","123456789"));
+
         System.exit(0);
-
-//        databaseFacade.insertPerson(new Person("Gilbert","Moser",
-//                new java.sql.Date(new Date(1985, 1, 1).getTime()),
-//                "GilbMos","123456789"));
-
 
     }
 }
