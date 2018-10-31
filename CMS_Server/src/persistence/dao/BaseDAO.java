@@ -51,17 +51,26 @@ public class BaseDAO<T, PK extends Serializable> {
 	}
 
 	public T getByKey(PK key) {
-		Session session = _sessionFactory.openSession();
-		Transaction tx = session.beginTransaction();
-		T t = session.get(_type, key);
-		t.toString();
-		tx.commit();
-		session.close();
+        Session session = _sessionFactory.openSession();
+		T t = null;
+
+		try{
+            Transaction tx = session.beginTransaction();
+            t = session.get(_type, key);
+
+            if(t != null){
+                t.toString();
+            }
+
+            tx.commit();
+        } catch (Exception ex){
+		    ex.printStackTrace();
+        } finally {
+            session.close();
+        }
+
 		return t;
 	}
-
-
-
 
 
 }
