@@ -18,5 +18,5 @@ public class CompetitionDAO extends BaseDAO<CompetitionPOJO, Integer> {
 	}
 
 
-	
+
 }

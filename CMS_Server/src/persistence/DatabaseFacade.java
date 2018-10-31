@@ -11,10 +11,21 @@ import java.util.List;
 
 public class DatabaseFacade {
 
+	// Person
 	public List<Person> listAllpersons() {
 		PersonDAO dao = PersonDAO.getInstance();
 		List<PersonPOJO> persons = dao.getAll();
 		return ObjectMapperUtils.mapAll(persons, Person.class);
+	}
+
+	public Person getPersonByID(Integer ID){
+
+		PersonDAO dao = PersonDAO.getInstance();
+		PersonPOJO person = dao.getByKey(ID);
+		if(person != null){
+			return ObjectMapperUtils.map(person, Person.class);
+		}
+		return null;
 	}
 
 
@@ -41,6 +52,19 @@ public class DatabaseFacade {
 		dao.insert(personPOJO);
 	}
 
+
+	// Competition
+	public Competition getCompetitionByID(Integer ID){
+
+		CompetitionDAO dao = CompetitionDAO.getInstance();
+		CompetitionPOJO comp = dao.getByKey(ID);
+		if(comp!=null){
+			return ObjectMapperUtils.map(comp, Competition.class);
+			// return new Competition(comp.getLocation(), comp.getStartDate());
+		}
+		return null;
+	}
+
 	public List<Competition> listAllcompetitions(){
 		CompetitionDAO dao = CompetitionDAO.getInstance();
 		List<CompetitionPOJO> competitions = dao.getAll();
@@ -48,7 +72,7 @@ public class DatabaseFacade {
 	}
 
 	// probably not working ...
-	public void InsertCompetition(Icompetition iCompetition){
+	public void insertCompetition(Icompetition iCompetition){
 		CompetitionPOJO competitionPOJO = new CompetitionPOJO();
 		ObjectMapperUtils.map(iCompetition, competitionPOJO);
 		CompetitionDAO dao = CompetitionDAO.getInstance();

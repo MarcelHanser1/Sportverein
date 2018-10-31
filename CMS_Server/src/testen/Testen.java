@@ -1,31 +1,49 @@
 package testen;
 
+import domain.classes.Competition;
 import domain.classes.Person;
 import domain.interfaces.Iperson;
 import persistence.DatabaseFacade;
 
-import java.util.Date;
 import java.util.List;
 
 public class Testen {
     public static void main(String[] args) {
+
+        PrintProvider printer = PrintProvider.getInstance();
+
         DatabaseFacade databaseFacade = new DatabaseFacade();
 
+        // Test: get all persons of the database
         List<Person> personList = databaseFacade.listAllpersons();
         for (Iperson iPerson: personList) {
-            System.out.println("First Name: \t" + iPerson.getFirstName());
-            System.out.println("Last Name: \t\t" + iPerson.getLastName());
-            System.out.println("Date of birth: \t" + iPerson.getDateOfBirth());
-            System.out.println("UserID: \t\t" + iPerson.getUserId());
-            System.out.println("SSN: \t\t\t" + iPerson.getSocialSecurityNumber() + "\n");
+            printer.printPersonInterface(iPerson);
         }
 
+//        databaseFacade.insertPerson(new Person("Gilbert","Moser",
+//                new java.sql.Date(new Date(1985, 1, 1).getTime()),
+//                "GilbMos","123456789"));
 
-        databaseFacade.insertPerson(new Person("Gilbert","Moser",
-                new java.sql.Date(new Date(1985, 1, 1).getTime()),
-                "GilbMos","123456789"));
+        // Test: get Person by id
+        Integer testPersonID = 1;
+        Person numberOne = databaseFacade.getPersonByID(testPersonID);
+        System.out.println("Person with the id " + testPersonID);
+        printer.printPersonInterface(numberOne);
+
+        // Test: get Competition by id
+        Integer testCompetitionID = 1;
+        Competition testComp = databaseFacade.getCompetitionByID(testCompetitionID);
+        printer.printCompetition(testComp);
+
+        /*
+        String compLocation = "Vienna";
+        Date compTime = Date.valueOf("2018-10-31");
+
+        Competition insertThisComp = new Competition(compLocation, compTime);
+
+        databaseFacade.insertCompetition(insertThisComp);
+        */
 
         System.exit(0);
-
     }
 }
