@@ -1,15 +1,19 @@
 package persistence.pojo;
 
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Objects;
+
+import static javax.persistence.GenerationType.IDENTITY;
 
 public class RolePersonPOJOPK implements Serializable {
     private int _roleId;
     private int _personId;
 
     @Column(name = "roleID")
+    @GeneratedValue(strategy = IDENTITY)
     @Id
     public int getRoleId() {
         return _roleId;

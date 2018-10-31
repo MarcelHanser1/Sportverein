@@ -16,6 +16,7 @@ public class CompetitionPOJO {
     private Collection<TeamCompResultPOJO> _teamCompResultsByCompId;
 
     @Id
+    @GeneratedValue
     @Column(name = "compID")
     public int getCompId() {
         return _compId;
