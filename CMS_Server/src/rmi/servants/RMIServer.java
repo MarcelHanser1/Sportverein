@@ -8,7 +8,8 @@ public class RMIServer {
     // required ip address ...
     // get your ip address information:
     // cmd command: ipconfig
-    // private static String rmiHostName = "172.22.32.123";
+    // private static String rmiHostName = "172.22.32.123";#
+    // private static String rmiHostName = "172.22.10.168";
     // private static String rmiHostName = "192.168.43.248";
     private static String rmiHostName = "localhost";
 
@@ -38,7 +39,13 @@ public class RMIServer {
             // -Djava.security.policy=src/rmi/servants/server.policy
             // System.setProperty("java.security.policy", "file:./server.policy");
 
+            // set hostname property
             System.setProperty("java.rmi.server.hostname", rmiHostName);
+
+            // set codebase
+            String rmiServerCodeBase = RMIServer.class.getProtectionDomain().getCodeSource().getLocation().toString();
+            System.setProperty("java.rmi.server.codebase", rmiServerCodeBase);
+            System.out.println("RMI Server Codebase: \n" + rmiServerCodeBase + "\n");
 
             // create the stubs
             PersonServant personStub = new PersonServant();

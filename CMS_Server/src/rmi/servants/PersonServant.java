@@ -9,7 +9,7 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
 
     private static final long serialVersionUID = 1L;
 
-    protected  PersonServant() throws RemoteException{
+    protected  PersonServant() throws RemoteException {
         super();
     }
 
