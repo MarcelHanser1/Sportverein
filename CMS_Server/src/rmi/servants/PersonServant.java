@@ -1,12 +1,9 @@
 package rmi.servants;
 
-import rmi.dto.PersonDTO;
 import rmi.interfaces.MemberRemotable;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.Collection;
-import java.util.Iterator;
 
 public class PersonServant extends UnicastRemoteObject implements MemberRemotable {
 
@@ -16,16 +13,23 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
         super();
     }
 
+    /*
     @Override
     public void addMember(PersonDTO personDTO) {
 
         // mapping: DTO to POJO
         // add member
         System.out.println("First name: " + personDTO.getFirstName());
+    }
+    */
 
+    @Override
+    public void test() throws RemoteException {
 
+        System.out.println("Test successful!");
     }
 
+    /*
     @Override
     public Collection<PersonDTO> displayMembers() {
         Collection<PersonDTO> collection = new Collection<PersonDTO>() {
@@ -97,5 +101,7 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
 
         return collection;
     }
+    */
+
 
 }

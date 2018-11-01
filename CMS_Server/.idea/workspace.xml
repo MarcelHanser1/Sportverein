@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5dfe90ed-4636-4dea-af29-2b1930b09ccf" name="Default" comment="domain und interfaceobject" />
+    <list default="true" id="5dfe90ed-4636-4dea-af29-2b1930b09ccf" name="Default" comment="RMI Server Implementation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rmi/interfaces/MemberRemotable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rmi/interfaces/MemberRemotable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rmi/servants/PersonServant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rmi/servants/PersonServant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rmi/servants/RMIServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/rmi/servants/RMIServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rmi/servants/server.policy" beforeDir="false" afterPath="$PROJECT_DIR$/src/rmi/servants/server.policy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rmi/interfaces/MemberRemotable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rmi/interfaces/MemberRemotable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rmi/servants/PersonServant$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rmi/servants/PersonServant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rmi/servants/PersonServant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rmi/servants/RMIServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rmi/servants/RMIServer.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,13 +49,6 @@
         <item name="a" type="feb32156:DbDataSourceImpl" />
         <item name="Vereinsdatenbank: database" type="bdf80c8a:MssqlImplModel$Database" />
         <item name="dbo: schema" type="3adcb6a6:MssqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="a" type="feb32156:DbDataSourceImpl" />
-        <item name="Vereinsdatenbank: database" type="bdf80c8a:MssqlImplModel$Database" />
-        <item name="dbo: schema" type="3adcb6a6:MssqlImplModel$Schema" />
-        <item name="Competition: table" type="a00791b9:MssqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -115,38 +118,46 @@
     <session id="2128808193">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.12" value="1" />
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.25" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="WS2018_Client" value="1" />
           <entry key="competition" value="1" />
           <entry key="competitionteam" value="1" />
-          <entry key="java" value="18" />
+          <entry key="java" value="21" />
           <entry key="person" value="1" />
+          <entry key="policy" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="3" />
-          <entry key="JAVA" value="18" />
+          <entry key="JAVA" value="21" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="UNKNOWN" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2" />
-          <entry key="java" value="1198" />
+          <entry key="java" value="3580" />
+          <entry key="policy" value="65" />
+          <entry key="txt" value="75" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1198" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="JAVA" value="3580" />
+          <entry key="PLAIN_TEXT" value="142" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -158,37 +169,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/classes/Person.java">
+        <entry file="file://$PROJECT_DIR$/src/rmi/interfaces/MemberRemotable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utilities/ObjectMapperUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/interfaces/Iperson.java">
+        <entry file="file://$PROJECT_DIR$/src/rmi/servants/PersonServant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domain/interfaces/Icompetition.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/testen/Testen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+            <state relative-caret-position="1207">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -196,8 +201,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/rmi/servants/RMIServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+            <state relative-caret-position="323">
+              <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -206,13 +211,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rmi/dto/PersonDTO.java">
+        <entry file="file://$PROJECT_DIR$/src/rmi/servants/server.policy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -258,6 +260,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Sevia2000 &lt;severin1992@gmx.ch&gt;" />
         <option value="Marcel" />
       </list>
     </option>
@@ -267,11 +270,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/persistence/dao/InternalTeam.java" />
-        <option value="$PROJECT_DIR$/src/persistence/pojo/PersonTeamPOJO.java" />
-        <option value="$PROJECT_DIR$/src/persistence/pojo/LineUpPersonPOJO.java" />
-        <option value="$PROJECT_DIR$/src/persistence/pojo/CompetitionTeamPOJO.java" />
-        <option value="$PROJECT_DIR$/src/interfaces/IpersonPOJO.java" />
         <option value="$PROJECT_DIR$/src/domain/Person.java" />
         <option value="$PROJECT_DIR$/src/domain/classes/IpersonImpl.java" />
         <option value="$PROJECT_DIR$/src/application/DatabasePerson.java" />
@@ -314,10 +312,15 @@
         <option value="$PROJECT_DIR$/src/rmi/MemberRemoteable.java" />
         <option value="$PROJECT_DIR$/src/rmi/interfaces/MemberRemoteable.java" />
         <option value="$PROJECT_DIR$/src/rmi/RMIServer.java" />
-        <option value="$PROJECT_DIR$/src/rmi/interfaces/MemberRemotable.java" />
         <option value="$PROJECT_DIR$/src/rmi/dto/PersonDTO.java" />
-        <option value="$PROJECT_DIR$/src/rmi/servants/RMIServer.java" />
+        <option value="$PROJECT_DIR$/src/rmi/servants/server.policy" />
+        <option value="$PROJECT_DIR$/src/rmi/servants/XorClientSocketFactory.java" />
+        <option value="$PROJECT_DIR$/src/rmi/interfaces/MemberRemotable.java" />
+        <option value="$PROJECT_DIR$/src/rmi/servants/XorSocket.java" />
+        <option value="$PROJECT_DIR$/src/rmi/rmi_utils/XorSocket.java" />
+        <option value="$PROJECT_DIR$/src/rmi/rmi_utils/XorInputStream.java" />
         <option value="$PROJECT_DIR$/src/rmi/servants/PersonServant.java" />
+        <option value="$PROJECT_DIR$/src/rmi/servants/RMIServer.java" />
       </list>
     </option>
   </component>
@@ -346,9 +349,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="45" />
+    <option name="x" value="111" />
     <option name="y" value="-20" />
-    <option name="width" value="1920" />
+    <option name="width" value="1679" />
     <option name="height" value="1065" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -357,6 +360,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -367,11 +372,6 @@
             <path>
               <item name="Sportverein" type="b2602c69:ProjectViewProjectNode" />
               <item name="CMS_Server" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sportverein" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMS_Server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -379,6 +379,20 @@
               <item name="CMS_Server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="rmi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sportverein" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CMS_Server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="rmi" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sportverein" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CMS_Server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="rmi" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Sportverein" type="b2602c69:ProjectViewProjectNode" />
@@ -387,29 +401,10 @@
               <item name="rmi" type="462c0819:PsiDirectoryNode" />
               <item name="servants" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Sportverein" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMS_Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="testen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sportverein" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMS_Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utilities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sportverein" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMS_Server" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -419,7 +414,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541005561575" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541085975594" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="D:/Downloads/PmP2017" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -430,11 +425,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="utilities" />
-      <recent name="helpers" />
-      <recent name="persistence.dao" />
-    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="interfaces" />
     </key>
@@ -442,11 +432,19 @@
       <recent name="D:\Downloads\testing2\src\persistence\dao" />
       <recent name="D:\Downloads\testing2" />
     </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="persistence" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="utilities" />
+      <recent name="helpers" />
+      <recent name="persistence.dao" />
+    </key>
+    <key name="OPEN_URL_DIALOG">
+      <recent name="https://github.com/adrianBischof/WS2018_Client" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="domain.classes" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="persistence" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -467,6 +465,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="rmi.servants.RMIServer" />
       <module name="Sportverein" />
+      <option name="VM_PARAMETERS" value="-Djava.security.policy=src/rmi/servants/server.policy" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="testen.*" />
@@ -533,6 +532,9 @@
       <workItem from="1540997357256" duration="2673000" />
       <workItem from="1541001693970" duration="2906000" />
       <workItem from="1541004654467" duration="207000" />
+      <workItem from="1541076540701" duration="58000" />
+      <workItem from="1541076768466" duration="8590000" />
+      <workItem from="1541086120443" duration="80000" />
     </task>
     <task id="LOCAL-00001" summary="domain und interfaceobject">
       <created>1540840082504</created>
@@ -541,11 +543,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540840082504</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="RMI Server Implementation&#10;&#10;Add this line to the Run configuration VM:&#10;-Djava.security.policy=src/rmi/servants/server.policy">
+      <created>1541009409782</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541009409782</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64665000" />
+    <option name="totallyTimeSpent" value="77571000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -557,11 +566,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7019231" visible="true" weight="0.25302014" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6713533" visible="true" weight="0.26778522" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Persistence" order="2" sideWeight="0.29807693" side_tool="true" visible="true" weight="0.25302014" />
+      <window_info id="Persistence" order="2" sideWeight="0.32864675" side_tool="true" visible="true" weight="0.26778522" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -570,7 +580,7 @@
       <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32577905" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30294907" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.194051" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -589,7 +599,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.16577181" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.1590604" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.13020134" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -632,7 +642,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="domain und interfaceobject" />
-    <option name="LAST_COMMIT_MESSAGE" value="domain und interfaceobject" />
+    <MESSAGE value="RMI Server Implementation&#10;&#10;Add this line to the Run configuration VM:&#10;-Djava.security.policy=src/rmi/servants/server.policy" />
+    <option name="LAST_COMMIT_MESSAGE" value="RMI Server Implementation&#10;&#10;Add this line to the Run configuration VM:&#10;-Djava.security.policy=src/rmi/servants/server.policy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -651,41 +662,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/resource/transaction/backend/jdbc/internal/JdbcResourceLocalTransactionCoordinatorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/engine/internal/MutableEntityEntry.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/engine/internal/MutableEntityEntryFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/engine/internal/AbstractEntityEntry.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="143" selection-start-line="143" selection-end-line="143" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/engine/internal/EntityEntryContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/internal/SessionFactoryImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
@@ -966,23 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rmi/interfaces/MemberRemotable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utilities/ObjectMapperUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1003,20 +962,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/rmi/rmi_utils/XorSocket.java" />
+    <entry file="file://$PROJECT_DIR$/src/rmi/rmi_utils/XorInputStream.java" />
+    <entry file="file://$PROJECT_DIR$/src/rmi/rmi_utils/XorClientSocketFactory.java" />
+    <entry file="https://github.com/adrianBischof/WS2018_Client">
+      <provider selected="true" editor-type-id="httpFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rmi/interfaces/MemberRemotable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utilities/ObjectMapperUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/rmi/servants/PersonServant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        <state relative-caret-position="1207">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/rmi/servants/server.policy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/rmi/servants/RMIServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        <state relative-caret-position="323">
+          <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
