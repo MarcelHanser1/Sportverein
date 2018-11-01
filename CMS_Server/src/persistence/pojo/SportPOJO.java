@@ -17,7 +17,6 @@ public class SportPOJO {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-
     @Column(name = "sportID")
     public int getSportId() {
         return _sportId;
@@ -72,7 +71,7 @@ public class SportPOJO {
         _departmentByDeptId = departmentByDeptId;
     }
 
-    @OneToMany(mappedBy = "sportBySportId")
+    @OneToMany(mappedBy = "sportBySportId", fetch = FetchType.EAGER)
     public Collection<TeamPOJO> getTeamsBySportId() {
         return _teamsBySportId;
     }

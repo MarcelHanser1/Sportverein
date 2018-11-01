@@ -20,6 +20,10 @@ public class Testen {
             printer.printPersonInterface(iPerson);
         }
 
+        List<Competition> competitionList = databaseFacade.listAllcompetitions();
+
+
+
         /*
         // Test: insert a person
         databaseFacade.insertPerson(
@@ -27,13 +31,13 @@ public class Testen {
                         new java.sql.Date.valueOf("2018-10-31"),
                         "GilbMos","123456789"));
         */
-
+        /*
         // Test: get Person by id
         Integer testPersonID = 1;
         Person numberOne = databaseFacade.getPersonByID(testPersonID);
         System.out.println("Person with the id " + testPersonID);
         printer.printPersonInterface(numberOne);
-
+*/
         // Test: insert a competition
 
         /*
@@ -45,10 +49,11 @@ public class Testen {
         */
 
         // Test: get Competition by id
+/*
         Integer testCompetitionID = 1;
         Competition testComp = databaseFacade.getCompetitionByID(testCompetitionID);
         printer.printCompetition(testComp);
-
+*/
         System.exit(0);
     }
 }

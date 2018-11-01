@@ -5,6 +5,7 @@ import domain.interfaces.Iperson;
 import java.sql.Date;
 
 public class Person implements Iperson {
+    private int personID;
     private String _firstName;
     private String _lastName;
     private Date _dateOfBirth;
@@ -85,4 +86,11 @@ public class Person implements Iperson {
         _socialSecurityNumber = socialSecurityNumber;
     }
 
+    public int getPersonID() {
+        return personID;
+    }
+
+    public void setPersonID(int personID) {
+        this.personID = personID;
+    }
 }

@@ -2,6 +2,7 @@ package persistence.pojo;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 import static javax.persistence.GenerationType.IDENTITY;
@@ -79,6 +80,8 @@ public class TeamPOJO {
         return Objects.hash(_teamId, _teamName, _sportId, _leagueId);
     }
 
+
+
     @OneToMany(mappedBy = "teamByTeamId")
     public Collection<CompetitionTeamPOJO> getCompetitionTeamsByTeamId() {
         return _competitionTeamsByTeamId;
@@ -142,5 +145,16 @@ public class TeamPOJO {
 
     public void setInternalTeamByTeamId(InternalTeamPOJO internalTeamByTeamId) {
         _internalTeamByTeamId = internalTeamByTeamId;
+    }
+
+    private List<CompetitionPOJO> _competitionByCompetitionTeam;
+
+    @ManyToMany(mappedBy = "teamByCompetitionTeam")
+    public List<CompetitionPOJO> getCompetitionByCompetitionTeam() {
+        return _competitionByCompetitionTeam;
+    }
+
+    public void setCompetitionByCompetitionTeam(List<CompetitionPOJO> competitionByCompetitionTeam) {
+        _competitionByCompetitionTeam = competitionByCompetitionTeam;
     }
 }
