@@ -11,14 +11,19 @@ public class TestAllCompetitionsWithAllInformationRead {
         DatabaseFacade databaseFacade = new DatabaseFacade();
         List<Competition> competitionList = databaseFacade.listAllcompetitions();
         for (Competition competition:competitionList) {
+            System.out.println("----------------------------------------------------------------------");
             System.out.println("Location: " + competition.getLocation());
-            System.out.println("Start Date: " + competition.getStartDate() + "\n\n");
+            System.out.println("Start Date: " + competition.getStartDate());
+            System.out.println("----------------------------------------------------------------------\n");
             List<Team> allTeams = competition.getTeamList();
             for (Team team: allTeams) {
+                System.out.println("----------------------------------------------------------------------");
                 System.out.println("Team Name: " + team.getTeamName());
                 System.out.println("Team League: " + team.getLeague().getLeagueName());
-                System.out.println("Team Sport: " + team.getSport().getSportName() + "\n\n");
+                System.out.println("Team Sport: " + team.getSport().getSportName());
+                System.out.println("----------------------------------------------------------------------\n");
             }
+            System.out.println("******************************************************\n");
         }
         System.exit(0);
     }
