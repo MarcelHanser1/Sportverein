@@ -14,6 +14,7 @@ public class CompetitionPOJO {
     private Date _startDate;
     private Collection<CompetitionTeamPOJO> _competitionTeamsByCompId;
     private Collection<LineUpPersonPOJO> _lineUpPeopleByCompId;
+    private Collection<TeamCompResultPOJO> _teamCompResultsByCompId;
     private List<TeamPOJO> _allteams;
 
     @Id
@@ -63,7 +64,7 @@ public class CompetitionPOJO {
         return Objects.hash(_compId, _location, _startDate);
     }
 
-    @OneToMany(mappedBy = "competitionByCompId", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "competitionByCompId")
     public Collection<CompetitionTeamPOJO> getCompetitionTeamsByCompId() {
         return _competitionTeamsByCompId;
     }
@@ -81,8 +82,17 @@ public class CompetitionPOJO {
         _lineUpPeopleByCompId = lineUpPeopleByCompId;
     }
 
+    @OneToMany(mappedBy = "competitionByCompId")
+    public Collection<TeamCompResultPOJO> getTeamCompResultsByCompId() {
+        return _teamCompResultsByCompId;
+    }
 
-    @ManyToMany
+    public void setTeamCompResultsByCompId(Collection<TeamCompResultPOJO> teamCompResultsByCompId) {
+        _teamCompResultsByCompId = teamCompResultsByCompId;
+    }
+
+
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name= "CompetitionTeam", joinColumns= {@JoinColumn(name="compID")},  inverseJoinColumns= {@JoinColumn(name="teamID")})
     public List<TeamPOJO> getAllteams() {
         return _allteams;

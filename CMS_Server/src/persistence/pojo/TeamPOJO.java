@@ -149,7 +149,7 @@ public class TeamPOJO {
 
     private List<CompetitionPOJO> _competitionByCompetitionTeam;
 
-    @ManyToMany(mappedBy = "teamByCompetitionTeam")
+    @ManyToMany(mappedBy = "allteams")
     public List<CompetitionPOJO> getCompetitionByCompetitionTeam() {
         return _competitionByCompetitionTeam;
     }

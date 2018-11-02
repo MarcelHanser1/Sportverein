@@ -2,10 +2,23 @@ package domain.classes;
 
 public class Team {
 
-    private int TeamID;
+
+
+
+    private int _teamID;
     private String _teamName;
     private Sport _Sport;
     private League _league;
+
+    public Team() {
+
+    }
+
+
+
+    public Team (int teamID) {
+        _teamID = teamID;
+    }
 
     public String getTeamName() {
         return _teamName;
@@ -32,10 +45,10 @@ public class Team {
     }
 
     public int getTeamID() {
-        return TeamID;
+        return _teamID;
     }
 
     public void setTeamID(int teamID) {
-        TeamID = teamID;
+        _teamID = teamID;
     }
 }

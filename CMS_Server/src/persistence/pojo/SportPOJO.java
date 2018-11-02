@@ -16,7 +16,7 @@ public class SportPOJO {
     private Collection<TeamPOJO> _teamsBySportId;
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "sportID")
     public int getSportId() {
         return _sportId;
