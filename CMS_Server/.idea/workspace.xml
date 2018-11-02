@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5dfe90ed-4636-4dea-af29-2b1930b09ccf" name="Default" comment="domain und interfaceobject">
-      <change beforePath="$PROJECT_DIR$/src/testen/TestAllCompetitionsWithAllInformationRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testen/TestAllCompetitionsWithAllInformationRead.java" afterDir="false" />
-    </list>
+    <list default="true" id="5dfe90ed-4636-4dea-af29-2b1930b09ccf" name="Default" comment="domain und interfaceobject" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -91,14 +89,14 @@
           <entry key="abstract" value="28" />
           <entry key="cell" value="222" />
           <entry key="dummy" value="59" />
-          <entry key="java" value="5984" />
+          <entry key="java" value="6054" />
           <entry key="txt" value="35" />
           <entry key="xml" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5984" />
+          <entry key="JAVA" value="6054" />
           <entry key="PLAIN_TEXT" value="94" />
           <entry key="Scratch" value="222" />
           <entry key="VTL" value="28" />
@@ -220,8 +218,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/testen/TestAllCompetitionsWithAllInformationRead.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="23" column="112" selection-start-line="23" selection-start-column="112" selection-end-line="23" selection-end-column="112" />
+            <state relative-caret-position="290">
+              <caret line="25" column="88" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -497,7 +495,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541118020128" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541118100358" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="D:/Downloads/PmP2017" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -674,7 +672,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99440000" />
+    <option name="totallyTimeSpent" value="99683000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -687,11 +685,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6983373" visible="true" weight="0.30850202" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6984479" visible="true" weight="0.30850202" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Persistence" order="2" sideWeight="0.3016627" side_tool="true" visible="true" weight="0.30850202" />
+      <window_info id="Persistence" order="2" sideWeight="0.30155212" side_tool="true" visible="true" weight="0.30850202" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -700,7 +697,7 @@
       <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32504147" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49878544" visible="true" weight="0.3018242" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49878544" visible="true" weight="0.25207296" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49959514" weight="0.39800996" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1244,8 +1241,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/testen/TestAllCompetitionsWithAllInformationRead.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="23" column="112" selection-start-line="23" selection-start-column="112" selection-end-line="23" selection-end-column="112" />
+        <state relative-caret-position="290">
+          <caret line="25" column="88" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
