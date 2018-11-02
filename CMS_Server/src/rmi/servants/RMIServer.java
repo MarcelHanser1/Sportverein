@@ -8,7 +8,7 @@ public class RMIServer {
     // required ip address ...
     // get your ip address information:
     // cmd command: ipconfig
-    // private static String rmiHostName = "172.22.32.123";#
+    // private static String rmiHostName = "172.22.32.123";
     // private static String rmiHostName = "172.22.10.168";
     // private static String rmiHostName = "192.168.43.248";
     private static String rmiHostName = "localhost";
@@ -27,25 +27,27 @@ public class RMIServer {
             Registry rmiRegistry = LocateRegistry.createRegistry(Registry.REGISTRY_PORT);
             // LocateRegistry.createRegistry(1099);
 
-            // Security Manager (optional)
-            if(System.getSecurityManager() == null) {
-
-                System.setSecurityManager(new SecurityManager());
-            }
-
             // set the policy file
             // alternative:
             // add this line to the Run/Debug Configurations VM:
             // -Djava.security.policy=src/rmi/servants/server.policy
             // System.setProperty("java.security.policy", "file:./server.policy");
 
+            // Security Manager (optional)
+//            if(System.getSecurityManager() == null) {
+//
+//                System.setSecurityManager(new SecurityManager());
+//            }
+
+
+
             // set hostname property
-            System.setProperty("java.rmi.server.hostname", rmiHostName);
+//            System.setProperty("java.rmi.server.hostname", rmiHostName);
 
             // set codebase
-            String rmiServerCodeBase = RMIServer.class.getProtectionDomain().getCodeSource().getLocation().toString();
+/*            String rmiServerCodeBase = RMIServer.class.getProtectionDomain().getCodeSource().getLocation().toString();
             System.setProperty("java.rmi.server.codebase", rmiServerCodeBase);
-            System.out.println("RMI Server Codebase: \n" + rmiServerCodeBase + "\n");
+            System.out.println("RMI Server Codebase: \n" + rmiServerCodeBase + "\n");*/
 
             // create the stubs
             PersonServant personStub = new PersonServant();
@@ -55,7 +57,7 @@ public class RMIServer {
             // rmiURL = "//" + rmiHostName + ":" + rmiPort + "/";
             rmiURL = "rmi://" + rmiHostName + ":" + rmiPort + "/";
             String bindName = rmiURL + "Server";
-            Naming.rebind(bindName, personStub);
+            Naming.rebind("rmi://localhost/Server", personStub);
 
             // Confirmation message!
             System.out.println("Objects bound to RMIRegistry!");

@@ -1,17 +1,25 @@
 package rmi.servants;
 
+
 import rmi.interfaces.MemberRemotable;
 
+import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-public class PersonServant extends UnicastRemoteObject implements MemberRemotable {
+public class PersonServant extends UnicastRemoteObject implements MemberRemotable, Serializable {
 
     private static final long serialVersionUID = 1L;
 
     protected  PersonServant() throws RemoteException {
         super();
     }
+
+    @Override
+    public void doIt() throws RemoteException {
+        System.out.println("Test successful");
+    }
+
 
     /*
     @Override
@@ -23,11 +31,7 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
     }
     */
 
-    @Override
-    public void test() throws RemoteException {
-
-        System.out.println("Test successful!");
-    }
+    //------------------> implement interface here
 
     /*
     @Override
