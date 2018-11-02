@@ -16,11 +16,11 @@ import java.util.List;
 public class TestCompleteCompetitionSave {
     public static void main(String[] args) throws ParseException {
         Competition competition = new Competition();
-        competition.setCompName("Main Tournament 2019");
-        competition.setLocation("Herrenau");
+        competition.setCompName("New Tournament 2019");
+        competition.setLocation("Mirau");
 
 
-        String date = "2019-11-11";
+        String date = "2020-11-11";
         java.util.Date utilDate = new SimpleDateFormat("yyyy-MM-dd").parse(date);
         java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
         competition.setStartDate(sqlDate);

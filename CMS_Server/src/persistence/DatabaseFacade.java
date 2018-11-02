@@ -86,10 +86,9 @@ public class DatabaseFacade {
 	public void insertCompetition(Competition competition){
         CompetitionDAO dao = CompetitionDAO.getInstance();
         CompetitionPOJO competitionPOJO = ObjectMapperUtils.map(competition, CompetitionPOJO.class);
-            for (int i = 0; i < competition.getTeamList().size();i++) {
-                competitionPOJO.setAllteams(ObjectMapperUtils.mapAll(competition.getTeamList(), TeamPOJO.class));
+//                competitionPOJO.setAllteams(ObjectMapperUtils.mapAll(competition.getTeamList(), TeamPOJO.class));
 //                competitionPOJO.getAllteams().get(i).setSportBySportId(ObjectMapperUtils.map(competition.getTeamList().get(i).getSport(),SportPOJO.class));
-            }
+//            }
 		dao.insert(competitionPOJO);
 	}
 
