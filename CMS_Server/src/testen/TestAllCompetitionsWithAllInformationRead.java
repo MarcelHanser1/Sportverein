@@ -12,6 +12,7 @@ public class TestAllCompetitionsWithAllInformationRead {
         List<Competition> competitionList = databaseFacade.listAllcompetitions();
         for (Competition competition:competitionList) {
             System.out.println("----------------------------------------------------------------------");
+            System.out.println("Tournament Name:: " + competition.getCompName());
             System.out.println("Location: " + competition.getLocation());
             System.out.println("Start Date: " + competition.getStartDate());
             System.out.println("----------------------------------------------------------------------\n");

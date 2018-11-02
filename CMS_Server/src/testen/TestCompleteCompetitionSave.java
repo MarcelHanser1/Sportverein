@@ -16,20 +16,19 @@ import java.util.List;
 public class TestCompleteCompetitionSave {
     public static void main(String[] args) throws ParseException {
         Competition competition = new Competition();
-        competition.setLocation("Kramsau");
+        competition.setCompName("Main Tournament 2019");
+        competition.setLocation("Herrenau");
 
 
-        String date = "2019-03-30";
+        String date = "2019-11-11";
         java.util.Date utilDate = new SimpleDateFormat("yyyy-MM-dd").parse(date);
         java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
         competition.setStartDate(sqlDate);
         List<Team> teams = new LinkedList<>();
         teams.add(new Team(1));
         teams.add(new Team(2));
-        teams.add(new Team(3));
         teams.add(new Team(4));
         teams.add(new Team(12));
-        teams.add(new Team(13));
         teams.add(new Team(14));
         competition.setTeamList(teams);
         DatabaseFacade databaseFacade = new DatabaseFacade();

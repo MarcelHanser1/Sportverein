@@ -30,6 +30,18 @@ public class CompetitionPOJO {
     }
 
     @Basic
+    @Column(name = "compName")
+    public String getCompName() {
+        return _compName;
+    }
+
+    public void setCompName(String compName) {
+        _compName = compName;
+    }
+
+
+
+    @Basic
     @Column(name = "location")
     public String getLocation() {
         return _location;
@@ -101,5 +113,7 @@ public class CompetitionPOJO {
     public void setAllteams(List<TeamPOJO> allteams) {
         _allteams = allteams;
     }
+
+    private String _compName;
 
 }

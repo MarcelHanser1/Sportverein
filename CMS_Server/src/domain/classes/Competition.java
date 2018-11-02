@@ -6,6 +6,15 @@ import java.util.List;
 public class Competition implements domain.interfaces.Icompetition {
     private int _compId;
 
+    public String getCompName() {
+        return _compName;
+    }
+
+    public void setCompName(String compName) {
+        _compName = compName;
+    }
+
+    private String _compName;
     private String _location;
     private Date _startDate;
     private List<Team> _teamList;
