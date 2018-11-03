@@ -1,5 +1,8 @@
 package rmi.servants;
 
+import org.hibernate.SessionFactory;
+import persistence.HibernateUtil;
+
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.rmi.Naming;
@@ -14,7 +17,9 @@ public class RMIServer {
 
     static {
         try {
+            SessionFactory _sessionFactory = HibernateUtil.getSessionFactory();
             rmiHostName = InetAddress.getLocalHost().getHostAddress();
+            System.out.println(InetAddress.getLocalHost().getHostAddress());
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }

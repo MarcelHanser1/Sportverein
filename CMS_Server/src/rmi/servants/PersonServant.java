@@ -1,7 +1,7 @@
 package rmi.servants;
 
 
-import persistence.DatabaseFacade;
+import program.MemberHandler;
 import rmi.dto.PersonDTO;
 import rmi.interfaces.MemberRemotable;
 
@@ -12,7 +12,7 @@ import java.rmi.server.UnicastRemoteObject;
 public class PersonServant extends UnicastRemoteObject implements MemberRemotable, Serializable {
 
     private static final long serialVersionUID = 1L;
-
+    private MemberHandler _memberHandler = new MemberHandler();
     protected  PersonServant() throws RemoteException {
         super();
     }
@@ -26,8 +26,9 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
     public void addNewMember(PersonDTO personDTO) throws RemoteException {
         // mapping: DTO to POJO
         // add member
-        DatabaseFacade databaseFacade = new DatabaseFacade();
-        databaseFacade.insertPerson(personDTO);
+        _memberHandler.addNewMember(personDTO);
+
+
     }
 
 
