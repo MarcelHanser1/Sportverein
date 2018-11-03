@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="a" uuid="729d336d-f532-45b8-81df-5cfe049ed876">
+    <data-source source="LOCAL" name="Vereinsdatenbank" uuid="729d336d-f532-45b8-81df-5cfe049ed876">
       <driver-ref>azure.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>

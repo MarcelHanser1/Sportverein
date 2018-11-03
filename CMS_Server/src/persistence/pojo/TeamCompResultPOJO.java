@@ -3,6 +3,8 @@ package persistence.pojo;
 import javax.persistence.*;
 import java.util.Objects;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 @Entity
 @Table(name = "TeamCompResult", schema = "dbo", catalog = "Vereinsdatenbank")
 public class TeamCompResultPOJO {
@@ -14,6 +16,8 @@ public class TeamCompResultPOJO {
     private TeamPOJO _teamByTeamId;
 
     @Id
+    @GeneratedValue(strategy = IDENTITY)
+
     @Column(name = "teamCompResultID")
     public int getTeamCompResultId() {
         return _teamCompResultId;

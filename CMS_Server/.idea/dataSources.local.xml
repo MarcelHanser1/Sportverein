@@ -9,16 +9,10 @@
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>
       <user-name>adminroot@vereinsserver</user-name>
-      <introspection-schemas>@:@</introspection-schemas>
+      <introspection-schemas>@:@|Vereinsdatenbank:</introspection-schemas>
     </data-source>
     <data-source name="hibernate.cfg.xml/Hibernate" uuid="5545a2c5-a234-47b9-989d-94d0e261908c">
-      <database-info product="Microsoft SQL Server" version="12.00.900" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 7.0 for SQL Server" driver-version="7.0.0.0" family="AZURE" exact-version="12.0.900">
-        <extra-name-characters>$#@</extra-name-characters>
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>adminroot@vereinsserver</user-name>
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="MSSQL" exact-version="0.0" />
     </data-source>
   </component>
 </project>

@@ -3,6 +3,8 @@ package persistence.pojo;
 import javax.persistence.*;
 import java.util.Objects;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 @Entity
 @Table(name = "RolePerson", schema = "dbo", catalog = "Vereinsdatenbank")
 @IdClass(RolePersonPOJOPK.class)
@@ -13,6 +15,7 @@ public class RolePersonPOJO {
     private PersonPOJO _personByPersonId;
 
     @Id
+    @GeneratedValue(strategy = IDENTITY)
     @Column(name = "roleID")
     public int getRoleId() {
         return _roleId;

@@ -4,6 +4,8 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 @Entity
 @Table(name = "Department", schema = "dbo", catalog = "Vereinsdatenbank")
 public class DepartmentPOJO {
@@ -24,6 +26,7 @@ public class DepartmentPOJO {
     }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "deptID")
     public int getDeptId() {
         return _deptId;

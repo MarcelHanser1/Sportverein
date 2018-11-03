@@ -4,6 +4,8 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 @Entity
 @Table(name = "Sport", schema = "dbo", catalog = "Vereinsdatenbank")
 public class SportPOJO {
@@ -14,6 +16,7 @@ public class SportPOJO {
     private Collection<TeamPOJO> _teamsBySportId;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "sportID")
     public int getSportId() {
         return _sportId;
@@ -68,7 +71,7 @@ public class SportPOJO {
         _departmentByDeptId = departmentByDeptId;
     }
 
-    @OneToMany(mappedBy = "sportBySportId")
+    @OneToMany(mappedBy = "sportBySportId", fetch = FetchType.EAGER)
     public Collection<TeamPOJO> getTeamsBySportId() {
         return _teamsBySportId;
     }

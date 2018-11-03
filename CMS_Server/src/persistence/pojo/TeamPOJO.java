@@ -2,7 +2,10 @@ package persistence.pojo;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
+
+import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "Team", schema = "dbo", catalog = "Vereinsdatenbank")
@@ -20,6 +23,8 @@ public class TeamPOJO {
     private InternalTeamPOJO _internalTeamByTeamId;
 
     @Id
+    @GeneratedValue(strategy = IDENTITY)
+
     @Column(name = "teamID")
     public int getTeamId() {
         return _teamId;
@@ -74,6 +79,8 @@ public class TeamPOJO {
     public int hashCode() {
         return Objects.hash(_teamId, _teamName, _sportId, _leagueId);
     }
+
+
 
     @OneToMany(mappedBy = "teamByTeamId")
     public Collection<CompetitionTeamPOJO> getCompetitionTeamsByTeamId() {
@@ -138,5 +145,16 @@ public class TeamPOJO {
 
     public void setInternalTeamByTeamId(InternalTeamPOJO internalTeamByTeamId) {
         _internalTeamByTeamId = internalTeamByTeamId;
+    }
+
+    private List<CompetitionPOJO> _competitionByCompetitionTeam;
+
+    @ManyToMany(mappedBy = "allteams")
+    public List<CompetitionPOJO> getCompetitionByCompetitionTeam() {
+        return _competitionByCompetitionTeam;
+    }
+
+    public void setCompetitionByCompetitionTeam(List<CompetitionPOJO> competitionByCompetitionTeam) {
+        _competitionByCompetitionTeam = competitionByCompetitionTeam;
     }
 }

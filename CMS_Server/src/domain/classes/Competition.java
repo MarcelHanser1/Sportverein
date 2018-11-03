@@ -1,13 +1,31 @@
 package domain.classes;
 
-import domain.interfaces.Icompetition;
-
 import java.sql.Date;
+import java.util.List;
 
-public class Competition implements Icompetition {
+public class Competition implements domain.interfaces.Icompetition {
+    private int _compId;
 
+    public String getCompName() {
+        return _compName;
+    }
+
+    public void setCompName(String compName) {
+        _compName = compName;
+    }
+
+    private String _compName;
     private String _location;
     private Date _startDate;
+    private List<Team> _teamList;
+
+    public List<Team> getTeamList() {
+        return _teamList;
+    }
+
+    public void setTeamList(List<Team> teamList) {
+        _teamList = teamList;
+    }
 
     public Competition() {
 
@@ -30,4 +48,11 @@ public class Competition implements Icompetition {
     @Override
     public void setStartDate(Date startDate) { _startDate = startDate; }
 
+    public int getCompId() {
+        return _compId;
+    }
+
+    public void setCompId(int compId) {
+        _compId = compId;
+    }
 }

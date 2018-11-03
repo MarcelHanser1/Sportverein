@@ -21,6 +21,7 @@ public class PersonPOJO {
     private Collection<InternalTeamPOJO> _internalTeamsByPersonId;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "personID")
     public int getPersonId() {
         return _personId;
