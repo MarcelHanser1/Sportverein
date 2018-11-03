@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.sql.Date;
 
 public class PersonDTO implements Serializable {
+
+    private static final long serialVersionUID = 7181607601291344700L;
+    private int personID;
     private String _firstName;
     private String _lastName;
     private Date _dateOfBirth;
@@ -64,4 +67,11 @@ public class PersonDTO implements Serializable {
         _socialSecurityNumber = socialSecurityNumber;
     }
 
+    public int getPersonID() {
+        return personID;
+    }
+
+    public void setPersonID(int personID) {
+        this.personID = personID;
+    }
 }

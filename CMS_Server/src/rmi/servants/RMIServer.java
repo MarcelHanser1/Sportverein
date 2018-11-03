@@ -1,5 +1,7 @@
 package rmi.servants;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -8,7 +10,15 @@ public class RMIServer {
     // required ip address ...
     // get your ip address information:
     // cmd command: ipconfig
-    private static String rmiHostName = "172.22.33.57";
+    private static String rmiHostName;
+
+    static {
+        try {
+            rmiHostName = InetAddress.getLocalHost().getHostAddress();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+    }
     // private static String rmiHostName = "172.22.10.168";
     // private static String rmiHostName = "192.168.43.248";
     // private static String rmiHostName = "localhost";
