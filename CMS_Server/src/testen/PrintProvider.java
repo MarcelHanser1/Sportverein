@@ -1,7 +1,7 @@
 package testen;
 
 import domain.classes.Competition;
-import domain.classes.PersonDto;
+import domain.classes.Person;
 import domain.interfaces.Iperson;
 
 public class PrintProvider {
@@ -15,16 +15,16 @@ public class PrintProvider {
         return instance;
     }
 
-    public void printPerson(PersonDto targetPersonDto){
+    public void printPerson(Person targetPerson){
 
-        if(targetPersonDto == null){
+        if(targetPerson == null){
             System.out.println("PersonDTO data not available!");
         } else {
-            System.out.println("First Name: \t" + targetPersonDto.getFirstName());
-            System.out.println("Last Name: \t\t" + targetPersonDto.getLastName());
-            System.out.println("Date of birth: \t" + targetPersonDto.getDateOfBirth());
-            System.out.println("UserID: \t\t" + targetPersonDto.getUserId());
-            System.out.println("SSN: \t\t\t" + targetPersonDto.getSocialSecurityNumber() + "\n");
+            System.out.println("First Name: \t" + targetPerson.getFirstName());
+            System.out.println("Last Name: \t\t" + targetPerson.getLastName());
+            System.out.println("Date of birth: \t" + targetPerson.getDateOfBirth());
+            System.out.println("UserID: \t\t" + targetPerson.getUserId());
+            System.out.println("SSN: \t\t\t" + targetPerson.getSocialSecurityNumber() + "\n");
         }
     }
 

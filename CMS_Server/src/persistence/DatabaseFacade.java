@@ -15,18 +15,18 @@ import java.util.List;
 
 public class DatabaseFacade {
 
-	public List<PersonDto> listAllpersons() {
+	public List<Person> listAllpersons() {
 		PersonDAO dao = PersonDAO.getInstance();
 		List<PersonPOJO> persons = dao.getAll();
-		return ObjectMapperUtils.mapAll(persons, PersonDto.class);
+		return ObjectMapperUtils.mapAll(persons, Person.class);
 	}
 
-	public PersonDto getPersonByID(Integer ID){
+	public PersonDTO getPersonByID(Integer ID){
 
 		PersonDAO dao = PersonDAO.getInstance();
 		PersonPOJO person = dao.getByKey(ID);
 		if(person != null){
-			return ObjectMapperUtils.map(person, PersonDto.class);
+			return ObjectMapperUtils.map(person, PersonDTO.class);
 		}
 		return null;
 	}
@@ -34,8 +34,8 @@ public class DatabaseFacade {
 
 
 	public void insertPerson (PersonDTO personDTO) {
-		PersonPOJO personPOJO = new PersonPOJO();
-		ObjectMapperUtils.map(personDTO, personPOJO);
+        PersonPOJO personPOJO = ObjectMapperUtils.map(personDTO, PersonPOJO.class);
+        PersonPOJO ObjectMapperUtils.map(personDTO, PersonPOJO.class);
 		PersonDAO dao = PersonDAO.getInstance();
 		dao.insert(personPOJO);
 	}

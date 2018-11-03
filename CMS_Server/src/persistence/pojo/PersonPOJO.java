@@ -3,6 +3,7 @@ package persistence.pojo;
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -144,4 +145,18 @@ public class PersonPOJO {
     public void setInternalTeamsByPersonId(Collection<InternalTeamPOJO> internalTeamsByPersonId) {
         _internalTeamsByPersonId = internalTeamsByPersonId;
     }
+
+    private List<RolePOJO> _roleList;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name= "RolePerson", joinColumns= {@JoinColumn(name="personID")},  inverseJoinColumns= {@JoinColumn(name="roleID")})
+    public List<RolePOJO> getRoleList() {
+        return _roleList;
+    }
+
+    public void setRoleList(List<RolePOJO> roleList) {
+        _roleList = roleList;
+    }
 }
+
+

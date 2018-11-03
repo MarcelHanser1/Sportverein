@@ -4,7 +4,7 @@ import domain.interfaces.Iperson;
 
 import java.sql.Date;
 
-public class PersonDto implements Iperson {
+public class Person implements Iperson {
     private int personID;
     private String _firstName;
     private String _lastName;
@@ -23,11 +23,11 @@ public class PersonDto implements Iperson {
 //    private Collection<InternalTeamPOJO> _internalTeamsByPersonId;
 
 
-    public PersonDto() {
+    public Person() {
 
     }
 
-    public PersonDto(String firstName, String lastName, Date dateOfBirth, String userId, String socialSecurityNumber) {
+    public Person(String firstName, String lastName, Date dateOfBirth, String userId, String socialSecurityNumber) {
         _firstName = firstName;
         _lastName = lastName;
         _dateOfBirth = dateOfBirth;
