@@ -1,6 +1,7 @@
 package rmi.servants;
 
 
+import persistence.DatabaseFacade;
 import rmi.dto.PersonDTO;
 import rmi.interfaces.MemberRemotable;
 
@@ -25,7 +26,8 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
     public void addNewMember(PersonDTO personDTO) throws RemoteException {
         // mapping: DTO to POJO
         // add member
-        System.out.println("First name: " + personDTO.getFirstName());
+        DatabaseFacade databaseFacade = new DatabaseFacade();
+        databaseFacade.insertPerson(personDTO);
     }
 
 

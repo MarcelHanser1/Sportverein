@@ -5,6 +5,7 @@ import domain.interfaces.Iperson;
 import persistence.dao.CompetitionDAO;
 import persistence.dao.PersonDAO;
 import persistence.pojo.*;
+import rmi.dto.PersonDTO;
 import utilities.ObjectMapperUtils;
 
 import java.util.List;
@@ -46,9 +47,9 @@ public class DatabaseFacade {
 //		return iPersonList;
 //	}
 
-	public void insertPerson (Iperson iPerson) {
+	public void insertPerson (PersonDTO personDTO) {
 		PersonPOJO personPOJO = new PersonPOJO();
-		ObjectMapperUtils.map(iPerson, personPOJO);
+		ObjectMapperUtils.map(personDTO, personPOJO);
 		PersonDAO dao = PersonDAO.getInstance();
 		dao.insert(personPOJO);
 	}
