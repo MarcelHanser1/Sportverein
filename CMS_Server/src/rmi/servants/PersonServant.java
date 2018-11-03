@@ -18,9 +18,6 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
     }
 
 
-    public void addNewMember() throws RemoteException {
-        System.out.println("Test successful!\n");
-    }
 
     @Override
     public void addNewMember(PersonDTO personDTO) throws RemoteException {
@@ -29,8 +26,14 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
         _memberHandler.addNewMember(personDTO);
     }
 
+    @Override
     public void deleteMember(int id) {
         _memberHandler.deleteMember(id);
+    }
+
+    @Override
+    public void updateMember(PersonDTO personDTO) {
+        _memberHandler.updateMember(personDTO);
     }
 
 

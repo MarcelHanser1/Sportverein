@@ -16,7 +16,7 @@ public class testest {
         List<RoleDTO> roleDTOList = new LinkedList<>();
         roleDTOList.add(roleDTO);
         person.setRoleDTOList(roleDTOList);
-        databaseFacade.insertPerson(person);
+        databaseFacade.addRole(person);
         System.exit(0);
     }
 }

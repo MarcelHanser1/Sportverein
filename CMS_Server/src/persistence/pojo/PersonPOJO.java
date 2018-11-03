@@ -148,7 +148,7 @@ public class PersonPOJO {
 
     private List<RolePOJO> _roleList;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @JoinTable(name= "RolePerson", joinColumns= {@JoinColumn(name="personID")},  inverseJoinColumns= {@JoinColumn(name="roleID")})
     public List<RolePOJO> getRoleList() {
         return _roleList;

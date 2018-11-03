@@ -22,5 +22,8 @@ public class MemberHandler {
         return _databaseFacade.getAllRoles();
     }
 
+    public void updateMember(PersonDTO personDTO) {
+        _databaseFacade.updatePerson(personDTO);
+    }
 
 }

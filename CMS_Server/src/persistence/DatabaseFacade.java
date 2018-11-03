@@ -6,6 +6,7 @@ import persistence.dao.PersonDAO;
 import persistence.dao.RoleDAO;
 import persistence.pojo.CompetitionPOJO;
 import persistence.pojo.PersonPOJO;
+import persistence.pojo.RolePOJO;
 import rmi.dto.PersonDTO;
 import rmi.dto.RoleDTO;
 import utilities.ObjectMapperUtils;
@@ -31,14 +32,38 @@ public class DatabaseFacade {
 		return null;
 	}
 
+    public PersonPOJO getPersonPOJOByID(Integer ID){
+
+        PersonDAO dao = PersonDAO.getInstance();
+        PersonPOJO person = dao.getByKey(ID);
+        if(person != null){
+            return person;
+        }
+        return null;
+    }
+
+    public void updatePerson (PersonDTO personDTO) {
+        PersonPOJO personPOJO = ObjectMapperUtils.map(personDTO, PersonPOJO.class);
+        personPOJO.setRoleList(ObjectMapperUtils.mapAll(personDTO.getRoleDTOList(), RolePOJO.class));
+        PersonDAO dao = PersonDAO.getInstance();
+        dao.update(personPOJO);
+    }
 
 
 	public void insertPerson (PersonDTO personDTO) {
         PersonPOJO personPOJO = ObjectMapperUtils.map(personDTO, PersonPOJO.class);
-        PersonPOJO ObjectMapperUtils.map(personDTO, PersonPOJO.class);
+        personPOJO.setRoleList(ObjectMapperUtils.mapAll(personDTO.getRoleDTOList(), RolePOJO.class));
 		PersonDAO dao = PersonDAO.getInstance();
 		dao.insert(personPOJO);
 	}
+
+    public void addRole (PersonDTO personDTO) {
+        PersonPOJO personPOJO = ObjectMapperUtils.map(personDTO, PersonPOJO.class);
+        personPOJO.setRoleList(ObjectMapperUtils.mapAll(personDTO.getRoleDTOList(), RolePOJO.class));
+        PersonDAO dao = PersonDAO.getInstance();
+        dao.update(personPOJO);
+    }
+
 
 
 	// Competition
