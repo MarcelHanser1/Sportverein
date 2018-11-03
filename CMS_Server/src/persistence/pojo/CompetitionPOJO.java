@@ -3,6 +3,7 @@ package persistence.pojo;
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -14,6 +15,7 @@ public class CompetitionPOJO {
     private Collection<CompetitionTeamPOJO> _competitionTeamsByCompId;
     private Collection<LineUpPersonPOJO> _lineUpPeopleByCompId;
     private Collection<TeamCompResultPOJO> _teamCompResultsByCompId;
+    private List<TeamPOJO> _allteams;
 
     @Id
     // @GeneratedValue
@@ -26,6 +28,18 @@ public class CompetitionPOJO {
     public void setCompId(int compId) {
         _compId = compId;
     }
+
+    @Basic
+    @Column(name = "compName")
+    public String getCompName() {
+        return _compName;
+    }
+
+    public void setCompName(String compName) {
+        _compName = compName;
+    }
+
+
 
     @Basic
     @Column(name = "location")
@@ -88,4 +102,18 @@ public class CompetitionPOJO {
     public void setTeamCompResultsByCompId(Collection<TeamCompResultPOJO> teamCompResultsByCompId) {
         _teamCompResultsByCompId = teamCompResultsByCompId;
     }
+
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name= "CompetitionTeam", joinColumns= {@JoinColumn(name="compID")},  inverseJoinColumns= {@JoinColumn(name="teamID")})
+    public List<TeamPOJO> getAllteams() {
+        return _allteams;
+    }
+
+    public void setAllteams(List<TeamPOJO> allteams) {
+        _allteams = allteams;
+    }
+
+    private String _compName;
+
 }

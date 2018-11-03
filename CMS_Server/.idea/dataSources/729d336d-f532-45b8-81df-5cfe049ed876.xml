@@ -14,9 +14,14 @@
     </database>
     <schema id="4" parent="2" name="dbo">
       <ObjectId>1</ObjectId>
+<<<<<<< HEAD
       <IntrospectionTimestamp>2018-11-02.11:47:05.133</IntrospectionTimestamp>
+=======
+      <IntrospectionTimestamp>2018-11-02.02:46:22.750</IntrospectionTimestamp>
+>>>>>>> origin/Persistenz-Test-Branch-Marcel
       <Current>1</Current>
       <Visible>1</Visible>
+      <DescriptionsCheckSum>59501758</DescriptionsCheckSum>
     </schema>
     <schema id="5" parent="2" name="guest">
       <ObjectId>2</ObjectId>
@@ -150,6 +155,14 @@
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
+<<<<<<< HEAD
+=======
+    <column id="35" parent="17" name="compName">
+      <Position>4</Position>
+      <DataType>varchar(255 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+>>>>>>> origin/Persistenz-Test-Branch-Marcel
     <index id="36" parent="17" name="PK__Competit__5E44F43D4A393CFC">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>

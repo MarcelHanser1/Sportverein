@@ -1,8 +1,9 @@
 package persistence;
 
 import domain.classes.*;
-import domain.interfaces.*;
-import persistence.dao.*;
+import domain.interfaces.Iperson;
+import persistence.dao.CompetitionDAO;
+import persistence.dao.PersonDAO;
 import persistence.pojo.*;
 import utilities.ObjectMapperUtils;
 
@@ -68,16 +69,30 @@ public class DatabaseFacade {
 	public List<Competition> listAllcompetitions(){
 		CompetitionDAO dao = CompetitionDAO.getInstance();
 		List<CompetitionPOJO> competitions = dao.getAll();
-		return ObjectMapperUtils.mapAll(competitions, Competition.class);
+
+		List<Competition> competitionList = ObjectMapperUtils.mapAll(competitions, Competition.class);
+		for(int i = 0; i < competitions.size();i++) {
+            competitionList.get(i).setTeamList((ObjectMapperUtils.mapAll(competitions.get(i).getAllteams(), Team.class)));
+            for (int j = 0; j < competitions.get(i).getAllteams().size(); j++) {
+                competitionList.get(i).getTeamList().get(j).setSport((ObjectMapperUtils.map(competitions.get(i).getAllteams().get(j).getSportBySportId(), Sport.class)));
+                competitionList.get(i).getTeamList().get(j).setLeague((ObjectMapperUtils.map(competitions.get(i).getAllteams().get(j).getLeagueByLeagueId(), League.class)));
+            }
+        }
+        return competitionList;
 	}
 
-	// probably not working ...
-	public void insertCompetition(Icompetition iCompetition){
-		CompetitionPOJO competitionPOJO = new CompetitionPOJO();
-		ObjectMapperUtils.map(iCompetition, competitionPOJO);
-		CompetitionDAO dao = CompetitionDAO.getInstance();
+
+
+	public void insertCompetition(Competition competition){
+        CompetitionDAO dao = CompetitionDAO.getInstance();
+        CompetitionPOJO competitionPOJO = ObjectMapperUtils.map(competition, CompetitionPOJO.class);
+//                competitionPOJO.setAllteams(ObjectMapperUtils.mapAll(competition.getTeamList(), TeamPOJO.class));
+//                competitionPOJO.getAllteams().get(i).setSportBySportId(ObjectMapperUtils.map(competition.getTeamList().get(i).getSport(),SportPOJO.class));
+//            }
 		dao.insert(competitionPOJO);
 	}
+
+
 
 
 }

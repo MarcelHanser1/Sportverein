@@ -26,8 +26,7 @@ public class DepartmentPOJO {
     }
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "deptID")
     public int getDeptId() {
         return _deptId;
