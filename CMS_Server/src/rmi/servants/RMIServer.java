@@ -8,10 +8,10 @@ public class RMIServer {
     // required ip address ...
     // get your ip address information:
     // cmd command: ipconfig
-    // private static String rmiHostName = "172.22.32.123";
+    private static String rmiHostName = "172.22.32.123";
     // private static String rmiHostName = "172.22.10.168";
     // private static String rmiHostName = "192.168.43.248";
-    private static String rmiHostName = "localhost";
+    // private static String rmiHostName = "localhost";
 
     // RMI port number
     private static int rmiPort = 1099;
@@ -39,8 +39,6 @@ public class RMIServer {
 //                System.setSecurityManager(new SecurityManager());
 //            }
 
-
-
             // set hostname property
 //            System.setProperty("java.rmi.server.hostname", rmiHostName);
 
@@ -55,9 +53,10 @@ public class RMIServer {
             // Bind the servants to the RMIRegistry
             // Naming.rebind("Server", personStub);
             // rmiURL = "//" + rmiHostName + ":" + rmiPort + "/";
-            rmiURL = "rmi://" + rmiHostName + ":" + rmiPort + "/";
-            String bindName = rmiURL + "Server";
-            Naming.rebind("rmi://localhost/Server", personStub);
+            // rmiURL = "rmi://" + rmiHostName + ":" + rmiPort + "/";
+            rmiURL = "rmi://" + rmiHostName + "/";
+            // String bindName = rmiURL + "Server";
+            Naming.rebind(rmiURL + "Server", personStub);
 
             // Confirmation message!
             System.out.println("Objects bound to RMIRegistry!");
@@ -66,6 +65,7 @@ public class RMIServer {
             for(String info : rmiRegistry.list()){
                 System.out.println(info);
             }
+            System.out.println("\n");
 
         } catch (Exception ex){
             ex.printStackTrace();

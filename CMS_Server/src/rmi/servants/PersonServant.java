@@ -1,6 +1,7 @@
 package rmi.servants;
 
 
+import rmi.dto.PersonDTO;
 import rmi.interfaces.MemberRemotable;
 
 import java.io.Serializable;
@@ -15,9 +16,16 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
         super();
     }
 
-    @Override
+
     public void addNewMember() throws RemoteException {
-        //TODO
+        System.out.println("Test successful!\n");
+    }
+
+    @Override
+    public void addNewMember(PersonDTO personDTO) throws RemoteException {
+        // mapping: DTO to POJO
+        // add member
+        System.out.println("First name: " + personDTO.getFirstName());
     }
 
 
@@ -30,8 +38,6 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
         System.out.println("First name: " + personDTO.getFirstName());
     }
     */
-
-    //------------------> implement interface here
 
     /*
     @Override
