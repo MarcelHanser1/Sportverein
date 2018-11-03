@@ -8,7 +8,7 @@ public class RMIServer {
     // required ip address ...
     // get your ip address information:
     // cmd command: ipconfig
-    private static String rmiHostName = "172.22.32.123";
+    private static String rmiHostName = "172.22.33.57";
     // private static String rmiHostName = "172.22.10.168";
     // private static String rmiHostName = "192.168.43.248";
     // private static String rmiHostName = "localhost";

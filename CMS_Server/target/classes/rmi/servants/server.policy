@@ -1,7 +1,4 @@
 grant {
     permission java.security.AllPermission;
-<<<<<<< HEAD
     permission java.net.SocketPermission "*:1099","listen,connect,accept,resolve";
-=======
->>>>>>> origin/Persistenz-Test-Branch-Marcel
 };
