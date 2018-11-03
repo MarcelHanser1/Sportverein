@@ -16,8 +16,8 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
     }
 
     @Override
-    public void doIt() throws RemoteException {
-        System.out.println("Test successful");
+    public void addNewMember() throws RemoteException {
+        //TODO
     }
 
 
