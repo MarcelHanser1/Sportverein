@@ -57,11 +57,11 @@ public class BaseDAO<T, PK extends Serializable> {
 		tx.commit();
 		session.close();
 	}
-	
+
 	public void delete(T t) {
 		Session session = _sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
-		session.merge(t);
+//		session.merge(t);
 		session.delete(t);
 		tx.commit();
 		session.close();

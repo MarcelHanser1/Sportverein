@@ -27,8 +27,10 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
         // mapping: DTO to POJO
         // add member
         _memberHandler.addNewMember(personDTO);
+    }
 
-
+    public void deleteMember(int id) {
+        _memberHandler.deleteMember(id);
     }
 
 

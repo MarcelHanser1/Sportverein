@@ -1,11 +1,13 @@
 package persistence;
 
 import domain.classes.*;
-import domain.interfaces.Iperson;
 import persistence.dao.CompetitionDAO;
 import persistence.dao.PersonDAO;
-import persistence.pojo.*;
+import persistence.dao.RoleDAO;
+import persistence.pojo.CompetitionPOJO;
+import persistence.pojo.PersonPOJO;
 import rmi.dto.PersonDTO;
+import rmi.dto.RoleDTO;
 import utilities.ObjectMapperUtils;
 
 import java.util.List;
@@ -13,39 +15,23 @@ import java.util.List;
 
 public class DatabaseFacade {
 
-	// PersonDTO
-	public List<Person> listAllpersons() {
+	public List<PersonDto> listAllpersons() {
 		PersonDAO dao = PersonDAO.getInstance();
 		List<PersonPOJO> persons = dao.getAll();
-		return ObjectMapperUtils.mapAll(persons, Person.class);
+		return ObjectMapperUtils.mapAll(persons, PersonDto.class);
 	}
 
-	public Person getPersonByID(Integer ID){
+	public PersonDto getPersonByID(Integer ID){
 
 		PersonDAO dao = PersonDAO.getInstance();
 		PersonPOJO person = dao.getByKey(ID);
 		if(person != null){
-			return ObjectMapperUtils.map(person, Person.class);
+			return ObjectMapperUtils.map(person, PersonDto.class);
 		}
 		return null;
 	}
 
 
-//	public List<Iperson> listAllIpersons() {
-//		PersonDAO dao = PersonDAO.getInstance();
-//		List<Iperson> iPersonList = new LinkedList<>();
-//		List<PersonPOJO> PersonPOJOList = dao.getAll();
-//		for (PersonPOJO personPOJO:PersonPOJOList) {
-//			Iperson iPerson = new PersonDTO();
-//			iPerson.setDateOfBirth(personPOJO.getDateOfBirth());
-//			iPerson.setFirstName(personPOJO.getFirstName());
-//			iPerson.setLastName(personPOJO.getLastName());
-//			iPerson.setSocialSecurityNumber(personPOJO.getSocialSecurityNumber());
-//			iPerson.setUserId(personPOJO.getUserId());
-//			iPersonList.add(iPerson);
-//		}
-//		return iPersonList;
-//	}
 
 	public void insertPerson (PersonDTO personDTO) {
 		PersonPOJO personPOJO = new PersonPOJO();
@@ -93,7 +79,16 @@ public class DatabaseFacade {
 		dao.insert(competitionPOJO);
 	}
 
+	public void deleteMember(int id) {
+		PersonDAO dao = PersonDAO.getInstance();
+		PersonPOJO personPOJO = new PersonPOJO();
+		personPOJO.setPersonId(id);
+		dao.delete(personPOJO);
+	}
 
-
+	public List<RoleDTO> getAllRoles() {
+		RoleDAO roleDAO = RoleDAO.getInstance();
+		return ObjectMapperUtils.mapAll(roleDAO.getAll(), RoleDTO.class);
+	}
 
 }

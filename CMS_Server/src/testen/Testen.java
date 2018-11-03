@@ -1,7 +1,7 @@
 package testen;
 
 import domain.classes.Competition;
-import domain.classes.Person;
+import domain.classes.PersonDto;
 import domain.interfaces.Iperson;
 import persistence.DatabaseFacade;
 
@@ -15,8 +15,8 @@ public class Testen {
         DatabaseFacade databaseFacade = new DatabaseFacade();
 
         // Test: get all persons of the database
-        List<Person> personList = databaseFacade.listAllpersons();
-        for (Iperson iPerson: personList) {
+        List<PersonDto> personDtoList = databaseFacade.listAllpersons();
+        for (Iperson iPerson: personDtoList) {
             printer.printPersonInterface(iPerson);
         }
 
@@ -27,15 +27,15 @@ public class Testen {
         /*
         // Test: insert a person
         databaseFacade.insertPerson(
-                new Person("TimeLord","Clock",
+                new PersonDto("TimeLord","Clock",
                         new java.sql.Date.valueOf("2018-10-31"),
                         "GilbMos","123456789"));
         */
         /*
-        // Test: get Person by id
+        // Test: get PersonDto by id
         Integer testPersonID = 1;
-        Person numberOne = databaseFacade.getPersonByID(testPersonID);
-        System.out.println("Person with the id " + testPersonID);
+        PersonDto numberOne = databaseFacade.getPersonByID(testPersonID);
+        System.out.println("PersonDto with the id " + testPersonID);
         printer.printPersonInterface(numberOne);
 */
         // Test: insert a competition
