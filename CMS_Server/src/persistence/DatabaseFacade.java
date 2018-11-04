@@ -124,10 +124,9 @@ public class DatabaseFacade {
 		dao.insert(competitionPOJO);
 	}
 
-	public void deleteMember(int id) {
+	public void deleteMember(PersonDTO personDTO) {
 		PersonDAO dao = PersonDAO.getInstance();
-		PersonPOJO personPOJO = new PersonPOJO();
-		personPOJO.setPersonId(id);
+		PersonPOJO personPOJO = ObjectMapperUtils.map(personDTO,PersonPOJO.class);
 		dao.delete(personPOJO);
 	}
 

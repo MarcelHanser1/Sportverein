@@ -14,8 +14,8 @@ public class MemberHandler {
         _databaseFacade.insertPerson(personDTO);
     }
 
-    public void deleteMember(int id) {
-        _databaseFacade.deleteMember(id);
+    public void deleteMember(PersonDTO personDTO) {
+        _databaseFacade.deleteMember(personDTO);
     }
 
     public List<RoleDTO> getAllRoles() {

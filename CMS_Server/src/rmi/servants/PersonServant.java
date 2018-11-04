@@ -29,8 +29,8 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
     }
 
     @Override
-    public void deleteMember(int id) {
-        _memberHandler.deleteMember(id);
+    public void deleteMember(PersonDTO personDTO) {
+        _memberHandler.deleteMember(personDTO);
     }
 
     @Override
