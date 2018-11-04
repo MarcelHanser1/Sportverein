@@ -53,6 +53,10 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
         return null;
     }
 
+    @Override
+    public List<RoleDTO> getAllRoles () {
+        return _memberHandler.getAllRoles();
+    }
 
     /*
     @Override

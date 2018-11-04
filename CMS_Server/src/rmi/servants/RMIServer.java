@@ -64,7 +64,7 @@ public class RMIServer {
 
             // create the stubs
             PersonServant personStub = new PersonServant();
-            RoleServant roleServant = new RoleServant();
+//            RoleServant roleServant = new RoleServant();
             // Bind the servants to the RMIRegistry
             // Naming.rebind("Server", personStub);
             // rmiURL = "//" + rmiHostName + ":" + rmiPort + "/";
@@ -72,7 +72,7 @@ public class RMIServer {
             rmiURL = "rmi://" + rmiHostName + "/";
             // String bindName = rmiURL + "Server";
             Naming.rebind(rmiURL + "Members", personStub);
-            Naming.rebind(rmiURL + "Roles", roleServant);
+//            Naming.rebind(rmiURL + "Roles", roleServant);
             // Confirmation message!
             System.out.println("Objects bound to RMIRegistry!");
 
