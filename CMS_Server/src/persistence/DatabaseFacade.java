@@ -44,7 +44,9 @@ public class DatabaseFacade {
 
     public void updatePerson (PersonDTO personDTO) {
         PersonPOJO personPOJO = ObjectMapperUtils.map(personDTO, PersonPOJO.class);
-        personPOJO.setRoleList(ObjectMapperUtils.mapAll(personDTO.getRoleDTOList(), RolePOJO.class));
+        if (personDTO.getRoleDTOList() != null) {
+            personPOJO.setRoleList(ObjectMapperUtils.mapAll(personDTO.getRoleDTOList(), RolePOJO.class));
+        }
         PersonDAO dao = PersonDAO.getInstance();
         dao.update(personPOJO);
     }
@@ -52,7 +54,9 @@ public class DatabaseFacade {
 
 	public void insertPerson (PersonDTO personDTO) {
         PersonPOJO personPOJO = ObjectMapperUtils.map(personDTO, PersonPOJO.class);
-        personPOJO.setRoleList(ObjectMapperUtils.mapAll(personDTO.getRoleDTOList(), RolePOJO.class));
+        if (personDTO.getRoleDTOList() != null) {
+            personPOJO.setRoleList(ObjectMapperUtils.mapAll(personDTO.getRoleDTOList(), RolePOJO.class));
+        }
 		PersonDAO dao = PersonDAO.getInstance();
 		dao.insert(personPOJO);
 	}
