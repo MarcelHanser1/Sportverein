@@ -3,6 +3,7 @@ package rmi.servants;
 
 import program.MemberHandler;
 import rmi.dto.PersonDTO;
+import rmi.dto.RoleDTO;
 import rmi.interfaces.MemberRemotable;
 
 import java.io.Serializable;
@@ -40,6 +41,16 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
     @Override
     public List<PersonDTO> getAllMember() throws RemoteException {
         return _memberHandler.getAllMember();
+    }
+
+    @Override
+    public PersonDTO addRolesToPersonDTO(PersonDTO person) throws RemoteException {
+        return _memberHandler.addRolesToPersonDTO(person);
+    }
+
+    @Override
+    public List<RoleDTO> getRolesFromPersonDto(PersonDTO person) throws RemoteException {
+        return null;
     }
 
 

@@ -29,5 +29,13 @@ public class MemberHandler {
     public List<PersonDTO> getAllMember() {
         return _databaseFacade.listAllpersons();
     }
+    public PersonDTO addRolesToPersonDTO(PersonDTO personDTO) {
+        personDTO = _databaseFacade.addRolesToPersonDto(personDTO);
+        return personDTO;
+    }
+
+    public List<RoleDTO> getRolesFromPersonDto(PersonDTO person) {
+        return _databaseFacade.getRolesFromPersonDto(person);
+    }
 
 }

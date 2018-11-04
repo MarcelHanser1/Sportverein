@@ -1,5 +1,8 @@
 package persistence.pojo;
 
+import org.hibernate.annotations.FetchMode;
+import org.hibernate.annotations.FetchProfile;
+
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Collection;
@@ -7,6 +10,9 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
+@FetchProfile(name = "eagerRoles", fetchOverrides = {
+        @FetchProfile.FetchOverride(entity = PersonPOJO.class, association = "roleList", mode = FetchMode.JOIN)
+})
 @Table(name = "Person", schema = "dbo", catalog = "Vereinsdatenbank")
 public class PersonPOJO {
     private int _personId;
@@ -150,7 +156,7 @@ public class PersonPOJO {
 
 //    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
 
-    @ManyToMany(cascade = CascadeType.MERGE)
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name= "RolePerson", joinColumns= {@JoinColumn(name="personID")},  inverseJoinColumns= {@JoinColumn(name="roleID")})
     public List<RolePOJO> getRoleList() {
         return _roleList;

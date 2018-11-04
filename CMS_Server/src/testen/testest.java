@@ -10,7 +10,7 @@ import java.util.List;
 public class testest {
     public static void main(String[] args) {
         DatabaseFacade databaseFacade = new DatabaseFacade();
-        PersonDTO person = databaseFacade.getPersonByID(8);
+        PersonDTO person = databaseFacade.getPersonByID(20);
         RoleDTO roleDTO = new RoleDTO();
         roleDTO.setRoleId(1);
         List<RoleDTO> roleDTOList = new LinkedList<>();

@@ -32,6 +32,22 @@ public class DatabaseFacade {
 		return null;
 	}
 
+	public PersonDTO addRolesToPersonDto (PersonDTO person) {
+		PersonDAO dao = PersonDAO.getInstance();
+		PersonPOJO personPOJO = dao.getByKey(person.getPersonID());
+		person = ObjectMapperUtils.map(personPOJO, PersonDTO.class);
+		person.setRoleDTOList(ObjectMapperUtils.mapAll(personPOJO.getRoleList(), RoleDTO.class));
+		return person;
+	}
+
+	public List<RoleDTO> getRolesFromPersonDto(PersonDTO person) {
+		PersonDAO dao = PersonDAO.getInstance();
+		PersonPOJO personPOJO = dao.getByKey(person.getPersonID());
+		return ObjectMapperUtils.mapAll(personPOJO.getRoleList(), RoleDTO.class);
+	}
+
+
+
     public PersonPOJO getPersonPOJOByID(Integer ID){
 
         PersonDAO dao = PersonDAO.getInstance();
