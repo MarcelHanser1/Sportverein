@@ -16,10 +16,10 @@ import java.util.List;
 
 public class DatabaseFacade {
 
-	public List<Person> listAllpersons() {
+	public List<PersonDTO> listAllpersons() {
 		PersonDAO dao = PersonDAO.getInstance();
 		List<PersonPOJO> persons = dao.getAll();
-		return ObjectMapperUtils.mapAll(persons, Person.class);
+		return ObjectMapperUtils.mapAll(persons, PersonDTO.class);
 	}
 
 	public PersonDTO getPersonByID(Integer ID){

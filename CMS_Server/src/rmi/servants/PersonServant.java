@@ -8,6 +8,7 @@ import rmi.interfaces.MemberRemotable;
 import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.List;
 
 public class PersonServant extends UnicastRemoteObject implements MemberRemotable, Serializable {
 
@@ -34,6 +35,11 @@ public class PersonServant extends UnicastRemoteObject implements MemberRemotabl
     @Override
     public void updateMember(PersonDTO personDTO) {
         _memberHandler.updateMember(personDTO);
+    }
+
+    @Override
+    public List<PersonDTO> getAllMember() throws RemoteException {
+        return _memberHandler.getAllMember();
     }
 
 

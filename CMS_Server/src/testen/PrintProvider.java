@@ -1,8 +1,7 @@
 package testen;
 
 import domain.classes.Competition;
-import domain.classes.Person;
-import domain.interfaces.Iperson;
+import rmi.dto.PersonDTO;
 
 public class PrintProvider {
 
@@ -15,20 +14,20 @@ public class PrintProvider {
         return instance;
     }
 
-    public void printPerson(Person targetPerson){
+    public void printPerson(PersonDTO targetPersonDto){
 
-        if(targetPerson == null){
+        if(targetPersonDto == null){
             System.out.println("PersonDTO data not available!");
         } else {
-            System.out.println("First Name: \t" + targetPerson.getFirstName());
-            System.out.println("Last Name: \t\t" + targetPerson.getLastName());
-            System.out.println("Date of birth: \t" + targetPerson.getDateOfBirth());
-            System.out.println("UserID: \t\t" + targetPerson.getUserId());
-            System.out.println("SSN: \t\t\t" + targetPerson.getSocialSecurityNumber() + "\n");
+            System.out.println("First Name: \t" + targetPersonDto.getFirstName());
+            System.out.println("Last Name: \t\t" + targetPersonDto.getLastName());
+            System.out.println("Date of birth: \t" + targetPersonDto.getDateOfBirth());
+            System.out.println("UserID: \t\t" + targetPersonDto.getUserId());
+            System.out.println("SSN: \t\t\t" + targetPersonDto.getSocialSecurityNumber() + "\n");
         }
     }
 
-    public void printPersonInterface(Iperson targetPersonInterface){
+    public void printPersonInterface(PersonDTO targetPersonInterface){
         if(targetPersonInterface == null){
             System.out.println("PersonDTO data not available!");
         } else {

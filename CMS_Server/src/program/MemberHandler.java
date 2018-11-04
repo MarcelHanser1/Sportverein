@@ -26,4 +26,8 @@ public class MemberHandler {
         _databaseFacade.updatePerson(personDTO);
     }
 
+    public List<PersonDTO> getAllMember() {
+        return _databaseFacade.listAllpersons();
+    }
+
 }

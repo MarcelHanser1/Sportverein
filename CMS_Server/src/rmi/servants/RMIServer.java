@@ -71,7 +71,7 @@ public class RMIServer {
             // rmiURL = "rmi://" + rmiHostName + ":" + rmiPort + "/";
             rmiURL = "rmi://" + rmiHostName + "/";
             // String bindName = rmiURL + "Server";
-            Naming.rebind(rmiURL + "Person", personStub);
+            Naming.rebind(rmiURL + "Members", personStub);
             Naming.rebind(rmiURL + "Roles", roleServant);
             // Confirmation message!
             System.out.println("Objects bound to RMIRegistry!");

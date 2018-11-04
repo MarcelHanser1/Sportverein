@@ -1,6 +1,7 @@
 package rmi.servants;
 
 import program.MemberHandler;
+import rmi.dto.PersonDTO;
 import rmi.dto.RoleDTO;
 import rmi.interfaces.RoleRemotable;
 
@@ -20,6 +21,10 @@ public class RoleServant extends UnicastRemoteObject implements RoleRemotable, S
 
     public List<RoleDTO> getAllRoles () {
         return _memberHandler.getAllRoles();
+    }
+
+    List<PersonDTO> getAllMember() {
+        return _memberHandler.getAllMember();
     }
 
 }
