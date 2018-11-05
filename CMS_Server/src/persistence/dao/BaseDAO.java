@@ -70,11 +70,11 @@ public class BaseDAO<T, PK extends Serializable> {
 
 	public T getByKey(PK key) {
 		Session session = _sessionFactory.openSession();
-		session.enableFetchProfile("eagerRoles");
+		session.enableFetchProfile("eager");
 		Transaction tx = session.beginTransaction();
 		T t = session.get(_type, key);
 		tx.commit();
-		session.disableFetchProfile("eagerRoles");
+		session.disableFetchProfile("eager");
 		session.close();
 		return t;
 	}

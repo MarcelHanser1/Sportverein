@@ -1,5 +1,8 @@
 package persistence.pojo;
 
+import org.hibernate.annotations.FetchMode;
+import org.hibernate.annotations.FetchProfile;
+
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Collection;
@@ -8,6 +11,9 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "Competition", schema = "dbo", catalog = "Vereinsdatenbank")
+@FetchProfile(name = "eager", fetchOverrides = {
+        @FetchProfile.FetchOverride(entity = CompetitionPOJO.class, association = "setAllTeams", mode = FetchMode.JOIN)
+})
 public class CompetitionPOJO {
     private int _compId;
     private String _location;
@@ -104,7 +110,7 @@ public class CompetitionPOJO {
     }
 
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name= "CompetitionTeam", joinColumns= {@JoinColumn(name="compID")},  inverseJoinColumns= {@JoinColumn(name="teamID")})
     public List<TeamPOJO> getAllteams() {
         return _allteams;

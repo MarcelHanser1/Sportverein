@@ -1,41 +1,41 @@
 package program;
 
-import persistence.DatabaseFacade;
+import persistence.MemberDatabaseFacade;
 import rmi.dto.PersonDTO;
 import rmi.dto.RoleDTO;
 
 import java.util.List;
 
 public class MemberHandler {
-    private DatabaseFacade _databaseFacade = new DatabaseFacade();
+    private MemberDatabaseFacade _memberDatabaseFacade = new MemberDatabaseFacade();
 
 
     public void addNewMember(PersonDTO personDTO) {
-        _databaseFacade.insertPerson(personDTO);
+        _memberDatabaseFacade.insertPerson(personDTO);
     }
 
     public void deleteMember(PersonDTO personDTO) {
-        _databaseFacade.deleteMember(personDTO);
+        _memberDatabaseFacade.deleteMember(personDTO);
     }
 
     public List<RoleDTO> getAllRoles() {
-        return _databaseFacade.getAllRoles();
+        return _memberDatabaseFacade.getAllRoles();
     }
 
     public void updateMember(PersonDTO personDTO) {
-        _databaseFacade.updatePerson(personDTO);
+        _memberDatabaseFacade.updatePerson(personDTO);
     }
 
     public List<PersonDTO> getAllMember() {
-        return _databaseFacade.listAllpersons();
+        return _memberDatabaseFacade.listAllpersons();
     }
     public PersonDTO addRolesToPersonDTO(PersonDTO personDTO) {
-        personDTO = _databaseFacade.addRolesToPersonDto(personDTO);
+        personDTO = _memberDatabaseFacade.addRolesToPersonDto(personDTO);
         return personDTO;
     }
 
     public List<RoleDTO> getRolesFromPersonDto(PersonDTO person) {
-        return _databaseFacade.getRolesFromPersonDto(person);
+        return _memberDatabaseFacade.getRolesFromPersonDto(person);
     }
 
 }
