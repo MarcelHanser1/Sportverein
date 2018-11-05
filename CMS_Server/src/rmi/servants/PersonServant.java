@@ -1,6 +1,4 @@
 package rmi.servants;
-
-
 import program.MemberHandler;
 import rmi.dto.PersonDTO;
 import rmi.dto.RoleDTO;
@@ -14,12 +12,12 @@ import java.util.List;
 public class PersonServant extends UnicastRemoteObject implements MemberRemotable, Serializable {
 
     private static final long serialVersionUID = 1L;
+
     private MemberHandler _memberHandler = new MemberHandler();
+
     protected  PersonServant() throws RemoteException {
         super();
     }
-
-
 
     @Override
     public void addNewMember(PersonDTO personDTO) throws RemoteException {
