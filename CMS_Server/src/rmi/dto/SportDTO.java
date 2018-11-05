@@ -1,6 +1,9 @@
 package rmi.dto;
 
-public class SportDTO {
+import java.io.Serializable;
+
+public class SportDTO implements Serializable {
+    private static final long serialVersionUID = 65486846;
     public String getSportName() {
         return _sportName;
     }

@@ -1,6 +1,9 @@
 package rmi.dto;
 
-public class TeamDTO {
+import java.io.Serializable;
+
+public class TeamDTO implements Serializable {
+    private static final long serialVersionUID = 848463218;
 
 
 

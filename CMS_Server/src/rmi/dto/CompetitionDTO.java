@@ -1,9 +1,11 @@
 package rmi.dto;
 
+import java.io.Serializable;
 import java.sql.Date;
 import java.util.List;
 
-public class CompetitionDTO {
+public class CompetitionDTO implements Serializable {
+    private static final long serialVersionUID = 654122888;
     private int _compId;
 
     public String getCompName() {
