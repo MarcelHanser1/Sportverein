@@ -30,6 +30,7 @@ public class RMIServer {
     public static void main(String[] args){
 
         try{
+
             Registry rmiRegistry = LocateRegistry.createRegistry(Registry.REGISTRY_PORT);
             // set the policy file
             // alternative:
