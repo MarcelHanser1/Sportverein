@@ -55,8 +55,8 @@ public class RMIServer {
 
 
             rmiURL = "rmi://" + rmiHostName + "/";
-            Factory factory = new Factory();
-            Naming.rebind(rmiURL + "Factory", factory);
+            FactoryMember factory = new FactoryMember();
+            Naming.rebind(rmiURL + "FactoryMember", factory);
             // Confirmation message!
             System.out.println("Objects bound to RMIRegistry!");
 

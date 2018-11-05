@@ -9,7 +9,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 
-public class PersonServant extends UnicastRemoteObject implements MemberRemotable, Serializable {
+public class PersonServant extends UnicastRemoteObject implements  MemberRemotable, Serializable {
 
     private static final long serialVersionUID = 1L;
 
