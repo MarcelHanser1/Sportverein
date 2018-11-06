@@ -6,7 +6,8 @@ import java.util.List;
 
 public class PersonDTO implements Serializable {
 
-    private static final long serialVersionUID = 7181607601291344700L;
+    private static final long serialVersionUID = 12458L;
+
     private int personID;
     private String _firstName;
     private String _lastName;

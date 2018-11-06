@@ -3,21 +3,15 @@ package rmi.dto;
 import java.io.Serializable;
 
 public class TeamDTO implements Serializable {
-    private static final long serialVersionUID = 848463218;
 
-
-
+    private static final long serialVersionUID = 84846L;
 
     private int _teamID;
     private String _teamName;
     private SportDTO _sportDTO;
     private LeagueDTO _leagueDTO;
 
-    public TeamDTO() {
-
-    }
-
-
+    public TeamDTO() { }
 
     public TeamDTO(int teamID) {
         _teamID = teamID;

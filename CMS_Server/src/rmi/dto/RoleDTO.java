@@ -3,7 +3,11 @@ package rmi.dto;
 import java.io.Serializable;
 
 public class RoleDTO implements Serializable {
-    private static final long serialVersionUID = 849846484;
+
+    private static final long serialVersionUID = 84984L;
+    private int _roleId;
+    private String _roleName;
+
     public int getRoleId() {
         return _roleId;
     }
@@ -20,6 +24,4 @@ public class RoleDTO implements Serializable {
         _roleName = roleName;
     }
 
-    private int _roleId;
-    private String _roleName;
 }
