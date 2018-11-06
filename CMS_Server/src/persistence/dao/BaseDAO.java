@@ -68,16 +68,28 @@ public class BaseDAO<T, PK extends Serializable> {
 	}
 
 
-	public T getByKey(PK key) {
+	public T getEagerRolesForPersonByKey(PK key) {
 		Session session = _sessionFactory.openSession();
-		session.enableFetchProfile("eager");
+		session.enableFetchProfile("eagerRoles");
 		Transaction tx = session.beginTransaction();
 		T t = session.get(_type, key);
 		tx.commit();
-		session.disableFetchProfile("eager");
+		session.disableFetchProfile("eagerRoles");
 		session.close();
 		return t;
 	}
+
+	public T getEagerTeamsForCompetitionByKey(PK key) {
+		Session session = _sessionFactory.openSession();
+		session.enableFetchProfile("eagerTeams");
+		Transaction tx = session.beginTransaction();
+		T t = session.get(_type, key);
+		tx.commit();
+		session.disableFetchProfile("eagerTeams");
+		session.close();
+		return t;
+	}
+
 
 
 

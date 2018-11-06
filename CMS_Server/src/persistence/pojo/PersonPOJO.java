@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
-@FetchProfile(name = "eager", fetchOverrides = {
+@FetchProfile(name = "eagerRoles", fetchOverrides = {
         @FetchProfile.FetchOverride(entity = PersonPOJO.class, association = "roleList", mode = FetchMode.JOIN)
 })
 @Table(name = "Person", schema = "dbo", catalog = "Vereinsdatenbank")

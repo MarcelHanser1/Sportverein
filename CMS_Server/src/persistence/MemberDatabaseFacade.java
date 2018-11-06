@@ -22,7 +22,7 @@ public class MemberDatabaseFacade {
 	public PersonDTO getPersonByID(Integer ID){
 
 		PersonDAO dao = PersonDAO.getInstance();
-		PersonPOJO person = dao.getByKey(ID);
+		PersonPOJO person = dao.getEagerRolesForPersonByKey(ID);
 		if(person != null){
 			return ObjectMapperUtils.map(person, PersonDTO.class);
 		}
@@ -31,7 +31,7 @@ public class MemberDatabaseFacade {
 
 	public PersonDTO addRolesToPersonDto (PersonDTO person) {
 		PersonDAO dao = PersonDAO.getInstance();
-		PersonPOJO personPOJO = dao.getByKey(person.getPersonID());
+		PersonPOJO personPOJO = dao.getEagerRolesForPersonByKey(person.getPersonID());
 		person = ObjectMapperUtils.map(personPOJO, PersonDTO.class);
 		person.setRoleDTOList(ObjectMapperUtils.mapAll(personPOJO.getRoleList(), RoleDTO.class));
 		return person;
@@ -39,7 +39,7 @@ public class MemberDatabaseFacade {
 
 	public List<RoleDTO> getRolesFromPersonDto(PersonDTO person) {
 		PersonDAO dao = PersonDAO.getInstance();
-		PersonPOJO personPOJO = dao.getByKey(person.getPersonID());
+		PersonPOJO personPOJO = dao.getEagerRolesForPersonByKey(person.getPersonID());
 		return ObjectMapperUtils.mapAll(personPOJO.getRoleList(), RoleDTO.class);
 	}
 
@@ -47,7 +47,7 @@ public class MemberDatabaseFacade {
 
     public PersonPOJO getPersonPOJOByID(Integer ID){
         PersonDAO dao = PersonDAO.getInstance();
-        PersonPOJO person = dao.getByKey(ID);
+        PersonPOJO person = dao.getEagerRolesForPersonByKey(ID);
         if(person != null){
             return person;
         }

@@ -34,7 +34,7 @@ public class CompetitionDatabaseFacade {
 
     public CompetitionDTO addTeamsToCompetitionDTO (CompetitionDTO competitionDTO) {
         CompetitionDAO dao = CompetitionDAO.getInstance();
-        CompetitionPOJO competitionPOJO = dao.getByKey(competitionDTO.getCompId());
+        CompetitionPOJO competitionPOJO = dao.getEagerTeamsForCompetitionByKey(competitionDTO.getCompId());
         competitionDTO = ObjectMapperUtils.map(competitionPOJO, CompetitionDTO.class);
         competitionDTO.setTeamList(ObjectMapperUtils.mapAll(competitionPOJO.getAllteams(), TeamDTO.class));
         return competitionDTO;
@@ -42,7 +42,7 @@ public class CompetitionDatabaseFacade {
 
     public List<TeamDTO> getTeamsfromCompetitionDto(CompetitionDTO competitionDTO) {
         CompetitionDAO dao = CompetitionDAO.getInstance();
-        CompetitionPOJO CompetitionPOJO = dao.getByKey(competitionDTO.getCompId());
+        CompetitionPOJO CompetitionPOJO = dao.getEagerTeamsForCompetitionByKey(competitionDTO.getCompId());
         return ObjectMapperUtils.mapAll(CompetitionPOJO.getAllteams(), TeamDTO.class);
     }
 
