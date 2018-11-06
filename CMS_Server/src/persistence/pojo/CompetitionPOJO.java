@@ -11,8 +11,8 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "Competition", schema = "dbo", catalog = "Vereinsdatenbank")
-@FetchProfile(name = "eager", fetchOverrides = {
-        @FetchProfile.FetchOverride(entity = CompetitionPOJO.class, association = "setAllTeams", mode = FetchMode.JOIN)
+@FetchProfile(name = "eagerTeams", fetchOverrides = {
+        @FetchProfile.FetchOverride(entity = CompetitionPOJO.class, association = "allteams", mode = FetchMode.JOIN)
 })
 public class CompetitionPOJO {
     private int _compId;
@@ -21,7 +21,6 @@ public class CompetitionPOJO {
     private Collection<CompetitionTeamPOJO> _competitionTeamsByCompId;
     private Collection<LineUpPersonPOJO> _lineUpPeopleByCompId;
     private Collection<TeamCompResultPOJO> _teamCompResultsByCompId;
-    private List<TeamPOJO> _allteams;
 
     @Id
     // @GeneratedValue
@@ -109,7 +108,7 @@ public class CompetitionPOJO {
         _teamCompResultsByCompId = teamCompResultsByCompId;
     }
 
-
+    private List<TeamPOJO> _allteams;
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name= "CompetitionTeam", joinColumns= {@JoinColumn(name="compID")},  inverseJoinColumns= {@JoinColumn(name="teamID")})
     public List<TeamPOJO> getAllteams() {
