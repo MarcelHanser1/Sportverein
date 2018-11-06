@@ -15,6 +15,7 @@ import java.util.Objects;
 })
 @Table(name = "Person", schema = "dbo", catalog = "Vereinsdatenbank")
 public class PersonPOJO {
+
     private int _personId;
     private String _firstName;
     private String _lastName;
@@ -166,5 +167,3 @@ public class PersonPOJO {
         _roleList = roleList;
     }
 }
-
-

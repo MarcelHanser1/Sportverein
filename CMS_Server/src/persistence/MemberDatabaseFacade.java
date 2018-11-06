@@ -10,7 +10,6 @@ import utilities.ObjectMapperUtils;
 
 import java.util.List;
 
-
 public class MemberDatabaseFacade {
 
 	public List<PersonDTO> listAllpersons() {
@@ -43,8 +42,6 @@ public class MemberDatabaseFacade {
 		return ObjectMapperUtils.mapAll(personPOJO.getRoleList(), RoleDTO.class);
 	}
 
-
-
     public PersonPOJO getPersonPOJOByID(Integer ID){
         PersonDAO dao = PersonDAO.getInstance();
         PersonPOJO person = dao.getByKey(ID);
@@ -63,7 +60,6 @@ public class MemberDatabaseFacade {
         dao.update(personPOJO);
     }
 
-
 	public void insertPerson (PersonDTO personDTO) {
         PersonPOJO personPOJO = ObjectMapperUtils.map(personDTO, PersonPOJO.class);
         if (personDTO.getRoleDTOList() != null) {
@@ -80,8 +76,6 @@ public class MemberDatabaseFacade {
         dao.update(personPOJO);
     }
 
-
-
 	public void deleteMember(PersonDTO personDTO) {
 		PersonDAO dao = PersonDAO.getInstance();
 		PersonPOJO personPOJO = ObjectMapperUtils.map(personDTO,PersonPOJO.class);
@@ -92,5 +86,4 @@ public class MemberDatabaseFacade {
 		RoleDAO roleDAO = RoleDAO.getInstance();
 		return ObjectMapperUtils.mapAll(roleDAO.getAll(), RoleDTO.class);
 	}
-
 }

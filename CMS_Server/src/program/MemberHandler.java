@@ -7,8 +7,8 @@ import rmi.dto.RoleDTO;
 import java.util.List;
 
 public class MemberHandler {
-    private MemberDatabaseFacade _memberDatabaseFacade = new MemberDatabaseFacade();
 
+    private MemberDatabaseFacade _memberDatabaseFacade = new MemberDatabaseFacade();
 
     public void addNewMember(PersonDTO personDTO) {
         _memberDatabaseFacade.insertPerson(personDTO);
@@ -37,5 +37,4 @@ public class MemberHandler {
     public List<RoleDTO> getRolesFromPersonDto(PersonDTO person) {
         return _memberDatabaseFacade.getRolesFromPersonDto(person);
     }
-
 }

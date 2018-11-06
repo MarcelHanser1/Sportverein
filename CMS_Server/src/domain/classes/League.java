@@ -3,11 +3,7 @@ package domain.classes;
 public class League {
 
     private int _leagueID;
-
     private String _leagueName;
-
-
-
 
     public String getLeagueName() {
         return _leagueName;

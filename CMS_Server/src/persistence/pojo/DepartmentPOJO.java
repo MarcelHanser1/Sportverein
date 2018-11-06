@@ -4,11 +4,10 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
 
-import static javax.persistence.GenerationType.IDENTITY;
-
 @Entity
 @Table(name = "Department", schema = "dbo", catalog = "Vereinsdatenbank")
 public class DepartmentPOJO {
+
     private String _deptName;
     private int _deptId;
     private int _headOfDeptId;

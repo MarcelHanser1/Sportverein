@@ -10,6 +10,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Table(name = "Team", schema = "dbo", catalog = "Vereinsdatenbank")
 public class TeamPOJO {
+
     private int _teamId;
     private String _teamName;
     private int _sportId;

@@ -15,7 +15,6 @@ public class PersonDTO implements Serializable {
     private String _socialSecurityNumber;
     private List<RoleDTO> _roleDTOList;
 
-
 //    public PersonDTO() {
 //
 //    }

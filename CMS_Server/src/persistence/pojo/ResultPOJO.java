@@ -9,6 +9,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Table(name = "Result", schema = "dbo", catalog = "Vereinsdatenbank")
 public class ResultPOJO {
+
     private int _resultId;
     private int _pointsTeam1;
     private int _pointsTeam2;

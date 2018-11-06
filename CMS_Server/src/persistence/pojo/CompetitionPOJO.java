@@ -15,6 +15,7 @@ import java.util.Objects;
         @FetchProfile.FetchOverride(entity = CompetitionPOJO.class, association = "setAllTeams", mode = FetchMode.JOIN)
 })
 public class CompetitionPOJO {
+
     private int _compId;
     private String _location;
     private Date _startDate;
@@ -109,7 +110,6 @@ public class CompetitionPOJO {
         _teamCompResultsByCompId = teamCompResultsByCompId;
     }
 
-
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name= "CompetitionTeam", joinColumns= {@JoinColumn(name="compID")},  inverseJoinColumns= {@JoinColumn(name="teamID")})
     public List<TeamPOJO> getAllteams() {
@@ -121,5 +121,4 @@ public class CompetitionPOJO {
     }
 
     private String _compName;
-
 }

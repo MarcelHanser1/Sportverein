@@ -7,6 +7,7 @@ import java.util.Objects;
 @Table(name = "CompetitionTeam", schema = "dbo", catalog = "Vereinsdatenbank")
 @IdClass(CompetitionTeamPOJOPK.class)
 public class CompetitionTeamPOJO {
+
     private int _compId;
     private int _teamId;
     private CompetitionPOJO _competitionByCompId;

@@ -65,5 +65,4 @@ public class ObjectMapperUtils {
         modelMapper.map(source, destination);
         return destination;
     }
-
 }

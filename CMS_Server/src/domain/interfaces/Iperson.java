@@ -4,8 +4,6 @@ import java.sql.Date;
 
 public interface Iperson {
 
-
-
     String getFirstName();
 
     void setFirstName(String firstName);

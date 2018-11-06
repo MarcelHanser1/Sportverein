@@ -15,6 +15,8 @@ import java.util.stream.Stream;
 public class RMIServer {
 
     private static String rmiHostName;
+    // RMI URL
+    private static String rmiURL;
 
     static {
         try {
@@ -25,9 +27,6 @@ public class RMIServer {
             e.printStackTrace();
         }
     }
-
-    // RMI URL
-    private static String rmiURL;
 
     private static void initializeIP(){
         try(final DatagramSocket socket = new DatagramSocket()){
@@ -40,6 +39,7 @@ public class RMIServer {
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args){
 
         try{

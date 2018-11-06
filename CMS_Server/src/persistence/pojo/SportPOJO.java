@@ -7,6 +7,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "Sport", schema = "dbo", catalog = "Vereinsdatenbank")
 public class SportPOJO {
+
     private int _sportId;
     private String _sportName;
     private int _deptId;
