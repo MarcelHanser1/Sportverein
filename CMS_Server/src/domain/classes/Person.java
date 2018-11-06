@@ -5,6 +5,7 @@ import domain.interfaces.Iperson;
 import java.sql.Date;
 
 public class Person implements Iperson {
+
     private int personID;
     private String _firstName;
     private String _lastName;
@@ -23,9 +24,7 @@ public class Person implements Iperson {
 //    private Collection<InternalTeamPOJO> _internalTeamsByPersonId;
 
 
-    public Person() {
-
-    }
+    public Person() { }
 
     public Person(String firstName, String lastName, Date dateOfBirth, String userId, String socialSecurityNumber) {
         _firstName = firstName;
@@ -33,7 +32,6 @@ public class Person implements Iperson {
         _dateOfBirth = dateOfBirth;
         _userId = userId;
         _socialSecurityNumber = socialSecurityNumber;
-
     }
 
     @Override

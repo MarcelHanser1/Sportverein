@@ -2,19 +2,13 @@ package domain.classes;
 
 public class Team {
 
-
-
-
     private int _teamID;
     private String _teamName;
     private Sport _Sport;
     private League _league;
 
-    public Team() {
 
-    }
-
-
+    public Team() { }
 
     public Team (int teamID) {
         _teamID = teamID;
