@@ -13,6 +13,7 @@ import java.util.Objects;
 @FetchProfile(name = "eagerRoles", fetchOverrides = {
         @FetchProfile.FetchOverride(entity = PersonPOJO.class, association = "roleList", mode = FetchMode.JOIN)
 })
+
 @Table(name = "Person", schema = "dbo", catalog = "Vereinsdatenbank")
 public class PersonPOJO {
     private int _personId;
