@@ -48,7 +48,7 @@ public class PersonServant extends UnicastRemoteObject implements  MemberRemotab
 
     @Override
     public List<RoleDTO> getRolesFromPersonDto(PersonDTO person) throws RemoteException {
-        return null;
+        return _memberHandler.getRolesFromPersonDto(person);
     }
 
     @Override
