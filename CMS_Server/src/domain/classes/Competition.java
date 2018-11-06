@@ -4,12 +4,7 @@ import java.sql.Date;
 import java.util.List;
 
 public class Competition implements domain.interfaces.Icompetition {
-
     private int _compId;
-    private String _compName;
-    private String _location;
-    private Date _startDate;
-    private List<Team> _teamList;
 
     public String getCompName() {
         return _compName;
@@ -18,6 +13,11 @@ public class Competition implements domain.interfaces.Icompetition {
     public void setCompName(String compName) {
         _compName = compName;
     }
+
+    private String _compName;
+    private String _location;
+    private Date _startDate;
+    private List<Team> _teamList;
 
     public List<Team> getTeamList() {
         return _teamList;

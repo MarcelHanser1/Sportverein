@@ -11,7 +11,10 @@ public class CompetitionHandler {
 
     private CompetitionDatabaseFacade _competitionDatabaseFacade = new CompetitionDatabaseFacade();
 
-    public void addNewCompetition(CompetitionDTO competition) {}
+    public void addNewCompetition(CompetitionDTO competition) {
+
+    }
+
 
     public List<CompetitionDTO> getAllCompetitions() {
         return _competitionDatabaseFacade.getAllCompetitions();
@@ -37,6 +40,8 @@ public class CompetitionHandler {
         _competitionDatabaseFacade.addTeam(competitionDTO);
     }
 
+
+
     public List<Competition> listAllcompetitionsWithAllInfos(){
         return _competitionDatabaseFacade.listAllcompetitionsWithAllInfos();
     }
@@ -48,4 +53,8 @@ public class CompetitionHandler {
     public List<TeamDTO> getAllTeams() {
         return _competitionDatabaseFacade.getAllTeams();
     }
+
+
+
 }
+

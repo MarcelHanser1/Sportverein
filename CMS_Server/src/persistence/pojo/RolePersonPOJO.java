@@ -9,7 +9,6 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Table(name = "RolePerson", schema = "dbo", catalog = "Vereinsdatenbank")
 @IdClass(RolePersonPOJOPK.class)
 public class RolePersonPOJO {
-
     private int _roleId;
     private int _personId;
     private RolePOJO _roleByRoleId;

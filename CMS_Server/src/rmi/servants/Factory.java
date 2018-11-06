@@ -16,6 +16,7 @@ public class Factory extends UnicastRemoteObject implements FactoryRemotable, Se
         super();
     }
 
+
     @Override
     public MemberRemotable factoryMember() throws RemoteException {
         try {

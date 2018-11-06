@@ -6,7 +6,6 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class CompetitionTeamPOJOPK implements Serializable {
-
     private int _compId;
     private int _teamId;
 

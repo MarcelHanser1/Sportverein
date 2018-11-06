@@ -7,7 +7,6 @@ import java.util.Objects;
 @Table(name = "PersonTeam", schema = "dbo", catalog = "Vereinsdatenbank")
 @IdClass(PersonTeamPOJOPK.class)
 public class PersonTeamPOJO {
-
     private int _personId;
     private int _teamId;
     private PersonPOJO _personByPersonId;

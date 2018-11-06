@@ -25,6 +25,7 @@ public class CompetitionDatabaseFacade {
         dao.insert(competitionPOJO);
     }
 
+
     public List<CompetitionDTO> getAllCompetitions() {
         CompetitionDAO dao = CompetitionDAO.getInstance();
         List<CompetitionPOJO> competitionPOJOList = dao.getAll();
@@ -70,6 +71,8 @@ public class CompetitionDatabaseFacade {
         dao.update(competitionPOJO);
     }
 
+
+
     public List<Competition> listAllcompetitionsWithAllInfos(){
         CompetitionDAO dao = CompetitionDAO.getInstance();
         List<CompetitionPOJO> competitions = dao.getAll();
@@ -94,4 +97,9 @@ public class CompetitionDatabaseFacade {
         TeamDAO teamDAO = TeamDAO.getInstance();
         return ObjectMapperUtils.mapAll(teamDAO.getAll(), TeamDTO.class);
     }
+
+
 }
+
+
+

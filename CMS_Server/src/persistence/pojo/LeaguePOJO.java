@@ -9,7 +9,6 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Table(name = "League", schema = "dbo", catalog = "Vereinsdatenbank")
 public class LeaguePOJO {
-
     private int _leagueId;
     private String _leagueName;
     private Collection<TeamPOJO> _teamsByLeagueId;

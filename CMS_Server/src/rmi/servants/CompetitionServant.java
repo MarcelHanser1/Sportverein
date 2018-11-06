@@ -13,11 +13,13 @@ import java.util.List;
 public class CompetitionServant extends UnicastRemoteObject implements CompetitionRemotable, Serializable {
 
     private static final long serialVersionUID = 215648486;
+
     private CompetitionHandler _competitionHandler = new CompetitionHandler();
 
     protected CompetitionServant() throws RemoteException {
         super();
     }
+
 
     @Override
     public void addNewCompetition(CompetitionDTO competition) throws RemoteException {

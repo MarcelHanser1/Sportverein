@@ -7,7 +7,6 @@ import java.util.Objects;
 @Entity
 @Table(name = "InternalTeam", schema = "dbo", catalog = "Vereinsdatenbank")
 public class InternalTeamPOJO {
-
     private int _trainerId;
     private int _teamId;
     private Collection<LineUpPersonPOJO> _lineUpPeopleByTeamId;

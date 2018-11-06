@@ -10,6 +10,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import java.io.Serializable;
 import java.util.List;
 
+
 public class BaseDAO<T, PK extends Serializable> {
 
 	protected SessionFactory _sessionFactory = HibernateUtil.getSessionFactory();
@@ -77,4 +78,7 @@ public class BaseDAO<T, PK extends Serializable> {
 		session.close();
 		return t;
 	}
+
+
+
 }

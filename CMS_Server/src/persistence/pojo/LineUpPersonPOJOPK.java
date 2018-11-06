@@ -6,7 +6,6 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class LineUpPersonPOJOPK implements Serializable {
-
     private int _personId;
     private int _compId;
 

@@ -6,8 +6,10 @@ import rmi.dto.PersonDTO;
 public class PrintProvider {
 
     private static final PrintProvider instance = new PrintProvider();
+
     //private constructor to avoid client applications to use constructor
     private PrintProvider(){}
+
     public static PrintProvider getInstance(){
         return instance;
     }

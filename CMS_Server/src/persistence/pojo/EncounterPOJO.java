@@ -8,7 +8,6 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Table(name = "Encounter", schema = "dbo", catalog = "Vereinsdatenbank")
 public class EncounterPOJO {
-
     private int _encounterId;
     private int _resultId;
     private int _team1Id;

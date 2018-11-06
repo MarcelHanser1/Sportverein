@@ -12,6 +12,7 @@ import java.util.List;
 public class PersonServant extends UnicastRemoteObject implements  MemberRemotable, Serializable {
 
     private static final long serialVersionUID = 1L;
+
     private MemberHandler _memberHandler = new MemberHandler();
 
     protected  PersonServant() throws RemoteException {
@@ -138,4 +139,6 @@ public class PersonServant extends UnicastRemoteObject implements  MemberRemotab
         return collection;
     }
     */
+
+
 }

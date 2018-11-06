@@ -9,7 +9,6 @@ import java.util.Objects;
 import static javax.persistence.GenerationType.IDENTITY;
 
 public class RolePersonPOJOPK implements Serializable {
-
     private int _roleId;
     private int _personId;
 
