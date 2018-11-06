@@ -18,6 +18,7 @@ public class RMIServer {
 
     static {
         try {
+            System.out.println("");
             SessionFactory _sessionFactory = HibernateUtil.getSessionFactory();
             rmiHostName = InetAddress.getLocalHost().getHostAddress();
             System.out.println("\nServer IP Address: " + InetAddress.getLocalHost().getHostAddress() +"\n");
