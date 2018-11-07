@@ -1,25 +1,22 @@
 package testen;
 
-import persistence.MemberDatabaseFacade;
-import rmi.dto.PersonDTO;
-import rmi.dto.RoleDTO;
+import program.CompetitionHandler;
+import rmi.dto.CompetitionDTO;
+import rmi.dto.TeamDTO;
+
+import java.util.List;
 
 public class TestAddRole {
     public static void main(String[] args) {
-//        CompetitionDatabaseFacade competitionDatabaseFacade = new CompetitionDatabaseFacade();
-//        CompetitionDTO competitionDTO = new CompetitionDTO();
-//        competitionDTO.setCompId(1);
-//        competitionDTO.setTeamList(competitionDatabaseFacade.getTeamsfromCompetitionDto(competitionDTO));
+        CompetitionHandler competitionHandler = new CompetitionHandler();
+        List<CompetitionDTO> competitionList  = competitionHandler.getAllCompetitions();
+        CompetitionDTO competitionDTO = competitionList.get(5);
+        List<TeamDTO> teamDTOS = competitionHandler.getAllTeams();
+        TeamDTO teamDTO = teamDTOS.get(0);
+        competitionDTO.setTeamList(teamDTOS);
+        competitionHandler.insertCompetition(competitionDTO);
 
 
-
-
-        MemberDatabaseFacade memberDatabaseFacade = new MemberDatabaseFacade();
-        PersonDTO personDTO = new PersonDTO();
-        personDTO.setPersonID(134);
-        personDTO.setRoleDTOList(memberDatabaseFacade.getRolesFromPersonDto(personDTO));
-        for(RoleDTO role:personDTO.getRoleDTOList()) {
-            System.out.println(role.getRoleName());
-        }
+        System.exit(0);
     }
 }
