@@ -16,7 +16,7 @@
     </database>
     <schema id="4" parent="2" name="dbo">
       <ObjectId>1</ObjectId>
-      <IntrospectionTimestamp>2018-11-03.15:47:50.457</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-11-07.06:33:14.380</IntrospectionTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
       <DescriptionsCheckSum>59501758</DescriptionsCheckSum>
@@ -70,7 +70,7 @@
     <table id="19" parent="4" name="Department">
       <ObjectId>2069582411</ObjectId>
       <CreatedTimestamp>2018-10-31.02:29:30.910</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-31.02:29:31.580</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-03.20:36:51.373</ModifiedTimestamp>
     </table>
     <table id="20" parent="4" name="Encounter">
       <ObjectId>370100359</ObjectId>
@@ -80,7 +80,7 @@
     <table id="21" parent="4" name="InternalTeam">
       <ObjectId>242099903</ObjectId>
       <CreatedTimestamp>2018-10-31.02:29:35.623</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-31.16:04:36.400</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-03.20:35:22.857</ModifiedTimestamp>
     </table>
     <table id="22" parent="4" name="League">
       <ObjectId>18099105</ObjectId>
@@ -90,12 +90,12 @@
     <table id="23" parent="4" name="LineUpPerson">
       <ObjectId>514100872</ObjectId>
       <CreatedTimestamp>2018-10-31.02:29:38.303</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-31.02:29:38.303</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-03.20:35:57.890</ModifiedTimestamp>
     </table>
     <table id="24" parent="4" name="Person">
       <ObjectId>2037582297</ObjectId>
       <CreatedTimestamp>2018-10-31.02:29:30.250</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-31.02:29:38.970</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-04.01:17:43.800</ModifiedTimestamp>
     </table>
     <table id="25" parent="4" name="PersonTeam">
       <ObjectId>594101157</ObjectId>
@@ -115,7 +115,7 @@
     <table id="28" parent="4" name="RolePerson">
       <ObjectId>178099675</ObjectId>
       <CreatedTimestamp>2018-10-31.02:29:34.963</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-31.02:29:34.963</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-03.20:38:59.047</ModifiedTimestamp>
     </table>
     <table id="29" parent="4" name="Sport">
       <ObjectId>2117582582</ObjectId>
@@ -253,47 +253,35 @@ teamID</ColNames>
       <UnderlyingIndexName>PK__Departme__BE2D26D66290DAC9</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="49" parent="19" name="FK__Departmen__headO__7D439ABD">
-      <ObjectId>2101582525</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2018-10-31.02:29:30.910</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-31.02:29:30.910</ModifiedTimestamp>
-      <ColNames>headOfDeptID</ColNames>
-      <RefTableId>2037582297</RefTableId>
-      <RefSchemaName>dbo</RefSchemaName>
-      <RefTableName>Person</RefTableName>
-      <RefKeyName>PK__Person__EC7D7D6D2851EC76</RefKeyName>
-      <RefColNames>personID</RefColNames>
-    </foreign-key>
-    <column id="50" parent="20" name="encounterID">
+    <column id="49" parent="20" name="encounterID">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="51" parent="20" name="resultID">
+    <column id="50" parent="20" name="resultID">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="52" parent="20" name="team1ID">
+    <column id="51" parent="20" name="team1ID">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="53" parent="20" name="team2ID">
+    <column id="52" parent="20" name="team2ID">
       <Position>4</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="54" parent="20" name="PK__Encounte__B6ED00D9D065A01E">
+    <index id="53" parent="20" name="PK__Encounte__B6ED00D9D065A01E">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>encounterID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="55" parent="20" name="PK__Encounte__B6ED00D9D065A01E">
+    <key id="54" parent="20" name="PK__Encounte__B6ED00D9D065A01E">
       <ObjectId>386100416</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:36.970</CreatedTimestamp>
@@ -302,7 +290,7 @@ teamID</ColNames>
       <UnderlyingIndexName>PK__Encounte__B6ED00D9D065A01E</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="56" parent="20" name="FK__Encounter__resul__17F790F9">
+    <foreign-key id="55" parent="20" name="FK__Encounter__resul__17F790F9">
       <ObjectId>402100473</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:36.970</CreatedTimestamp>
@@ -314,7 +302,7 @@ teamID</ColNames>
       <RefKeyName>PK__Result__C6EADC7B194A82DD</RefKeyName>
       <RefColNames>resultID</RefColNames>
     </foreign-key>
-    <foreign-key id="57" parent="20" name="FK__Encounter__team1__18EBB532">
+    <foreign-key id="56" parent="20" name="FK__Encounter__team1__18EBB532">
       <ObjectId>418100530</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:36.970</CreatedTimestamp>
@@ -326,7 +314,7 @@ teamID</ColNames>
       <RefKeyName>PK__Team__5ED7534A5806C3B1</RefKeyName>
       <RefColNames>teamID</RefColNames>
     </foreign-key>
-    <foreign-key id="58" parent="20" name="FK__Encounter__team2__19DFD96B">
+    <foreign-key id="57" parent="20" name="FK__Encounter__team2__19DFD96B">
       <ObjectId>434100587</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:36.973</CreatedTimestamp>
@@ -338,24 +326,23 @@ teamID</ColNames>
       <RefKeyName>PK__Team__5ED7534A5806C3B1</RefKeyName>
       <RefColNames>teamID</RefColNames>
     </foreign-key>
-    <column id="59" parent="21" name="trainerID">
+    <column id="58" parent="21" name="trainerID">
       <Position>1</Position>
       <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="60" parent="21" name="teamID">
+    <column id="59" parent="21" name="teamID">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="61" parent="21" name="PK__internal__5ED7534A250D8134">
+    <index id="60" parent="21" name="PK__internal__5ED7534A250D8134">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>teamID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="62" parent="21" name="PK__internal__5ED7534A250D8134">
+    <key id="61" parent="21" name="PK__internal__5ED7534A250D8134">
       <ObjectId>258099960</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:35.623</CreatedTimestamp>
@@ -364,19 +351,19 @@ teamID</ColNames>
       <UnderlyingIndexName>PK__internal__5ED7534A250D8134</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="63" parent="21" name="FK__internalT__train__10566F31">
-      <ObjectId>274100017</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2018-10-31.02:29:35.623</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-31.02:29:35.623</ModifiedTimestamp>
+    <foreign-key id="62" parent="21" name="FK__internalT__train__10566F31">
+      <ObjectId>674101442</ObjectId>
+      <CreatedTimestamp>2018-11-03.20:35:22.857</CreatedTimestamp>
+      <ModifiedTimestamp>2018-11-03.20:35:22.857</ModifiedTimestamp>
       <ColNames>trainerID</ColNames>
       <RefTableId>2037582297</RefTableId>
       <RefSchemaName>dbo</RefSchemaName>
       <RefTableName>Person</RefTableName>
       <RefKeyName>PK__Person__EC7D7D6D2851EC76</RefKeyName>
       <RefColNames>personID</RefColNames>
+      <OnDelete>set-null</OnDelete>
     </foreign-key>
-    <foreign-key id="64" parent="21" name="FK__internalT__teamI__114A936A">
+    <foreign-key id="63" parent="21" name="FK__internalT__teamI__114A936A">
       <ObjectId>290100074</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:35.623</CreatedTimestamp>
@@ -388,25 +375,25 @@ teamID</ColNames>
       <RefKeyName>PK__Team__5ED7534A5806C3B1</RefKeyName>
       <RefColNames>teamID</RefColNames>
     </foreign-key>
-    <column id="65" parent="22" name="leagueID">
+    <column id="64" parent="22" name="leagueID">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="66" parent="22" name="leagueName">
+    <column id="65" parent="22" name="leagueName">
       <Position>2</Position>
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="67" parent="22" name="PK__League__83F9831EA7BC55A9">
+    <index id="66" parent="22" name="PK__League__83F9831EA7BC55A9">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>leagueID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="68" parent="22" name="PK__League__83F9831EA7BC55A9">
+    <key id="67" parent="22" name="PK__League__83F9831EA7BC55A9">
       <ObjectId>34099162</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:32.273</CreatedTimestamp>
@@ -415,22 +402,22 @@ teamID</ColNames>
       <UnderlyingIndexName>PK__League__83F9831EA7BC55A9</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="69" parent="23" name="personID">
+    <column id="68" parent="23" name="personID">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="70" parent="23" name="teamID">
+    <column id="69" parent="23" name="teamID">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="71" parent="23" name="compID">
+    <column id="70" parent="23" name="compID">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="72" parent="23" name="PK__LineUpPe__2999322E6AE23456">
+    <index id="71" parent="23" name="PK__LineUpPe__2999322E6AE23456">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>personID
@@ -438,7 +425,7 @@ compID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="73" parent="23" name="PK__LineUpPe__2999322E6AE23456">
+    <key id="72" parent="23" name="PK__LineUpPe__2999322E6AE23456">
       <ObjectId>530100929</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:38.307</CreatedTimestamp>
@@ -448,19 +435,7 @@ compID</ColNames>
       <UnderlyingIndexName>PK__LineUpPe__2999322E6AE23456</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="74" parent="23" name="FK__LineUpPer__perso__208CD6FA">
-      <ObjectId>546100986</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2018-10-31.02:29:38.307</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-31.02:29:38.307</ModifiedTimestamp>
-      <ColNames>personID</ColNames>
-      <RefTableId>2037582297</RefTableId>
-      <RefSchemaName>dbo</RefSchemaName>
-      <RefTableName>Person</RefTableName>
-      <RefKeyName>PK__Person__EC7D7D6D2851EC76</RefKeyName>
-      <RefColNames>personID</RefColNames>
-    </foreign-key>
-    <foreign-key id="75" parent="23" name="FK__LineUpPer__teamI__2180FB33">
+    <foreign-key id="73" parent="23" name="FK__LineUpPer__teamI__2180FB33">
       <ObjectId>562101043</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:38.307</CreatedTimestamp>
@@ -472,7 +447,7 @@ compID</ColNames>
       <RefKeyName>PK__internal__5ED7534A250D8134</RefKeyName>
       <RefColNames>teamID</RefColNames>
     </foreign-key>
-    <foreign-key id="76" parent="23" name="FK__LineUpPer__compI__22751F6C">
+    <foreign-key id="74" parent="23" name="FK__LineUpPer__compI__22751F6C">
       <ObjectId>578101100</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:38.307</CreatedTimestamp>
@@ -484,45 +459,44 @@ compID</ColNames>
       <RefKeyName>PK__Competit__5E44F43D4A393CFC</RefKeyName>
       <RefColNames>compID</RefColNames>
     </foreign-key>
-    <column id="77" parent="24" name="personID">
+    <column id="75" parent="24" name="personID">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="78" parent="24" name="firstName">
+    <column id="76" parent="24" name="firstName">
       <Position>2</Position>
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="79" parent="24" name="lastName">
+    <column id="77" parent="24" name="lastName">
       <Position>3</Position>
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="80" parent="24" name="dateOfBirth">
+    <column id="78" parent="24" name="dateOfBirth">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="81" parent="24" name="userID">
+    <column id="79" parent="24" name="userID">
       <Position>5</Position>
       <DataType>varchar(255 char)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="82" parent="24" name="socialSecurityNumber">
+    <column id="80" parent="24" name="socialSecurityNumber">
       <Position>6</Position>
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="83" parent="24" name="PK__Person__EC7D7D6D2851EC76">
+    <index id="81" parent="24" name="PK__Person__EC7D7D6D2851EC76">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>personID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="84" parent="24" name="PK__Person__EC7D7D6D2851EC76">
+    <key id="82" parent="24" name="PK__Person__EC7D7D6D2851EC76">
       <ObjectId>2053582354</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:30.253</CreatedTimestamp>
@@ -531,17 +505,17 @@ compID</ColNames>
       <UnderlyingIndexName>PK__Person__EC7D7D6D2851EC76</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="85" parent="25" name="personID">
+    <column id="83" parent="25" name="personID">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="86" parent="25" name="teamID">
+    <column id="84" parent="25" name="teamID">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="87" parent="25" name="PK__PersonTe__599008598750959A">
+    <index id="85" parent="25" name="PK__PersonTe__599008598750959A">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>personID
@@ -549,7 +523,7 @@ teamID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="88" parent="25" name="PK__PersonTe__599008598750959A">
+    <key id="86" parent="25" name="PK__PersonTe__599008598750959A">
       <ObjectId>610101214</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:38.970</CreatedTimestamp>
@@ -559,7 +533,7 @@ teamID</ColNames>
       <UnderlyingIndexName>PK__PersonTe__599008598750959A</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="89" parent="25" name="FK__PersonTea__perso__25518C17">
+    <foreign-key id="87" parent="25" name="FK__PersonTea__perso__25518C17">
       <ObjectId>626101271</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:38.970</CreatedTimestamp>
@@ -571,7 +545,7 @@ teamID</ColNames>
       <RefKeyName>PK__Person__EC7D7D6D2851EC76</RefKeyName>
       <RefColNames>personID</RefColNames>
     </foreign-key>
-    <foreign-key id="90" parent="25" name="FK__PersonTea__teamI__2645B050">
+    <foreign-key id="88" parent="25" name="FK__PersonTea__teamI__2645B050">
       <ObjectId>642101328</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:38.973</CreatedTimestamp>
@@ -583,30 +557,30 @@ teamID</ColNames>
       <RefKeyName>PK__internal__5ED7534A250D8134</RefKeyName>
       <RefColNames>teamID</RefColNames>
     </foreign-key>
-    <column id="91" parent="26" name="resultID">
+    <column id="89" parent="26" name="resultID">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="92" parent="26" name="pointsTeam1">
+    <column id="90" parent="26" name="pointsTeam1">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="93" parent="26" name="pointsTeam2">
+    <column id="91" parent="26" name="pointsTeam2">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="94" parent="26" name="PK__Result__C6EADC7B194A82DD">
+    <index id="92" parent="26" name="PK__Result__C6EADC7B194A82DD">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>resultID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="95" parent="26" name="PK__Result__C6EADC7B194A82DD">
+    <key id="93" parent="26" name="PK__Result__C6EADC7B194A82DD">
       <ObjectId>98099390</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:33.610</CreatedTimestamp>
@@ -615,25 +589,25 @@ teamID</ColNames>
       <UnderlyingIndexName>PK__Result__C6EADC7B194A82DD</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="96" parent="27" name="roleID">
+    <column id="94" parent="27" name="roleID">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="97" parent="27" name="roleName">
+    <column id="95" parent="27" name="roleName">
       <Position>2</Position>
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="98" parent="27" name="PK__Role__CD98460AB43D1246">
+    <index id="96" parent="27" name="PK__Role__CD98460AB43D1246">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>roleID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="99" parent="27" name="PK__Role__CD98460AB43D1246">
+    <key id="97" parent="27" name="PK__Role__CD98460AB43D1246">
       <ObjectId>2021582240</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:29.613</CreatedTimestamp>
@@ -642,17 +616,17 @@ teamID</ColNames>
       <UnderlyingIndexName>PK__Role__CD98460AB43D1246</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="100" parent="28" name="roleID">
+    <column id="98" parent="28" name="roleID">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="101" parent="28" name="personID">
+    <column id="99" parent="28" name="personID">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="102" parent="28" name="PK__RolePers__035F91DCEE3DD743">
+    <index id="100" parent="28" name="PK__RolePers__035F91DCEE3DD743">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>roleID
@@ -660,7 +634,7 @@ personID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="103" parent="28" name="PK__RolePers__035F91DCEE3DD743">
+    <key id="101" parent="28" name="PK__RolePers__035F91DCEE3DD743">
       <ObjectId>194099732</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:34.963</CreatedTimestamp>
@@ -670,7 +644,7 @@ personID</ColNames>
       <UnderlyingIndexName>PK__RolePers__035F91DCEE3DD743</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="104" parent="28" name="FK__RolePerso__roleI__0C85DE4D">
+    <foreign-key id="102" parent="28" name="FK__RolePerso__roleI__0C85DE4D">
       <ObjectId>210099789</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:34.963</CreatedTimestamp>
@@ -682,42 +656,42 @@ personID</ColNames>
       <RefKeyName>PK__Role__CD98460AB43D1246</RefKeyName>
       <RefColNames>roleID</RefColNames>
     </foreign-key>
-    <foreign-key id="105" parent="28" name="FK__RolePerso__perso__0D7A0286">
-      <ObjectId>226099846</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2018-10-31.02:29:34.963</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-31.02:29:34.963</ModifiedTimestamp>
+    <foreign-key id="103" parent="28" name="FK__RolePerso__perso__0D7A0286">
+      <ObjectId>722101613</ObjectId>
+      <CreatedTimestamp>2018-11-03.20:38:59.047</CreatedTimestamp>
+      <ModifiedTimestamp>2018-11-03.20:38:59.047</ModifiedTimestamp>
       <ColNames>personID</ColNames>
       <RefTableId>2037582297</RefTableId>
       <RefSchemaName>dbo</RefSchemaName>
       <RefTableName>Person</RefTableName>
       <RefKeyName>PK__Person__EC7D7D6D2851EC76</RefKeyName>
       <RefColNames>personID</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="106" parent="29" name="sportID">
+    <column id="104" parent="29" name="sportID">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="107" parent="29" name="sportName">
+    <column id="105" parent="29" name="sportName">
       <Position>2</Position>
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="108" parent="29" name="deptID">
+    <column id="106" parent="29" name="deptID">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="109" parent="29" name="PK__Sport__AC9F7068A1F97F70">
+    <index id="107" parent="29" name="PK__Sport__AC9F7068A1F97F70">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sportID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="110" parent="29" name="PK__Sport__AC9F7068A1F97F70">
+    <key id="108" parent="29" name="PK__Sport__AC9F7068A1F97F70">
       <ObjectId>2133582639</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:31.580</CreatedTimestamp>
@@ -726,7 +700,7 @@ personID</ColNames>
       <UnderlyingIndexName>PK__Sport__AC9F7068A1F97F70</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="111" parent="29" name="FK__Sport__deptID__00200768">
+    <foreign-key id="109" parent="29" name="FK__Sport__deptID__00200768">
       <ObjectId>2099048</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:31.580</CreatedTimestamp>
@@ -738,35 +712,35 @@ personID</ColNames>
       <RefKeyName>PK__Departme__BE2D26D66290DAC9</RefKeyName>
       <RefColNames>deptID</RefColNames>
     </foreign-key>
-    <column id="112" parent="30" name="teamID">
+    <column id="110" parent="30" name="teamID">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="113" parent="30" name="teamName">
+    <column id="111" parent="30" name="teamName">
       <Position>2</Position>
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="114" parent="30" name="sportID">
+    <column id="112" parent="30" name="sportID">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="115" parent="30" name="leagueID">
+    <column id="113" parent="30" name="leagueID">
       <Position>4</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="116" parent="30" name="PK__Team__5ED7534A5806C3B1">
+    <index id="114" parent="30" name="PK__Team__5ED7534A5806C3B1">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>teamID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="117" parent="30" name="PK__Team__5ED7534A5806C3B1">
+    <key id="115" parent="30" name="PK__Team__5ED7534A5806C3B1">
       <ObjectId>130099504</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:34.280</CreatedTimestamp>
@@ -775,7 +749,7 @@ personID</ColNames>
       <UnderlyingIndexName>PK__Team__5ED7534A5806C3B1</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="118" parent="30" name="FK__Team__sportID__08B54D69">
+    <foreign-key id="116" parent="30" name="FK__Team__sportID__08B54D69">
       <ObjectId>146099561</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:34.280</CreatedTimestamp>
@@ -787,7 +761,7 @@ personID</ColNames>
       <RefKeyName>PK__Sport__AC9F7068A1F97F70</RefKeyName>
       <RefColNames>sportID</RefColNames>
     </foreign-key>
-    <foreign-key id="119" parent="30" name="FK__Team__leagueID__09A971A2">
+    <foreign-key id="117" parent="30" name="FK__Team__leagueID__09A971A2">
       <ObjectId>162099618</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:34.280</CreatedTimestamp>
@@ -799,35 +773,35 @@ personID</ColNames>
       <RefKeyName>PK__League__83F9831EA7BC55A9</RefKeyName>
       <RefColNames>leagueID</RefColNames>
     </foreign-key>
-    <column id="120" parent="31" name="teamCompResultID">
+    <column id="118" parent="31" name="teamCompResultID">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="121" parent="31" name="points">
+    <column id="119" parent="31" name="points">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="122" parent="31" name="compID">
+    <column id="120" parent="31" name="compID">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="123" parent="31" name="teamID">
+    <column id="121" parent="31" name="teamID">
       <Position>4</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="124" parent="31" name="PK__TeamComp__A2D9540F1AC8BC04">
+    <index id="122" parent="31" name="PK__TeamComp__A2D9540F1AC8BC04">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>teamCompResultID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="125" parent="31" name="PK__TeamComp__A2D9540F1AC8BC04">
+    <key id="123" parent="31" name="PK__TeamComp__A2D9540F1AC8BC04">
       <ObjectId>466100701</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:37.640</CreatedTimestamp>
@@ -836,7 +810,7 @@ personID</ColNames>
       <UnderlyingIndexName>PK__TeamComp__A2D9540F1AC8BC04</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="126" parent="31" name="FK__TeamCompR__compI__1CBC4616">
+    <foreign-key id="124" parent="31" name="FK__TeamCompR__compI__1CBC4616">
       <ObjectId>482100758</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:37.643</CreatedTimestamp>
@@ -848,7 +822,7 @@ personID</ColNames>
       <RefKeyName>PK__Competit__5E44F43D4A393CFC</RefKeyName>
       <RefColNames>compID</RefColNames>
     </foreign-key>
-    <foreign-key id="127" parent="31" name="FK__TeamCompR__teamI__1DB06A4F">
+    <foreign-key id="125" parent="31" name="FK__TeamCompR__teamI__1DB06A4F">
       <ObjectId>498100815</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-31.02:29:37.643</CreatedTimestamp>

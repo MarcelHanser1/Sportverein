@@ -1,35 +1,60 @@
 package rmi.servants;
-
-
-import persistence.DatabaseFacade;
+import program.MemberHandler;
 import rmi.dto.PersonDTO;
+import rmi.dto.RoleDTO;
 import rmi.interfaces.MemberRemotable;
 
 import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.List;
 
-public class PersonServant extends UnicastRemoteObject implements MemberRemotable, Serializable {
+public class PersonServant extends UnicastRemoteObject implements  MemberRemotable, Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    private MemberHandler _memberHandler = new MemberHandler();
+
     protected  PersonServant() throws RemoteException {
         super();
-    }
-
-
-    public void addNewMember() throws RemoteException {
-        System.out.println("Test successful!\n");
     }
 
     @Override
     public void addNewMember(PersonDTO personDTO) throws RemoteException {
         // mapping: DTO to POJO
         // add member
-        DatabaseFacade databaseFacade = new DatabaseFacade();
-        databaseFacade.insertPerson(personDTO);
+        _memberHandler.addNewMember(personDTO);
     }
 
+    @Override
+    public void deleteMember(PersonDTO personDTO) {
+        _memberHandler.deleteMember(personDTO);
+    }
+
+    @Override
+    public void updateMember(PersonDTO personDTO) {
+        _memberHandler.updateMember(personDTO);
+    }
+
+    @Override
+    public List<PersonDTO> getAllMember() throws RemoteException {
+        return _memberHandler.getAllMember();
+    }
+
+    @Override
+    public PersonDTO addRolesToPersonDTO(PersonDTO person) throws RemoteException {
+        return _memberHandler.addRolesToPersonDTO(person);
+    }
+
+    @Override
+    public List<RoleDTO> getRolesFromPersonDto(PersonDTO person) throws RemoteException {
+        return _memberHandler.getRolesFromPersonDto(person);
+    }
+
+    @Override
+    public List<RoleDTO> getAllRoles () {
+        return _memberHandler.getAllRoles();
+    }
 
     /*
     @Override

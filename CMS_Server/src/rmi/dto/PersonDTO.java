@@ -2,16 +2,20 @@ package rmi.dto;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.List;
 
 public class PersonDTO implements Serializable {
 
-    private static final long serialVersionUID = 7181607601291344700L;
+    private static final long serialVersionUID = 12458L;
+
     private int personID;
     private String _firstName;
     private String _lastName;
     private Date _dateOfBirth;
     private String _userId;
     private String _socialSecurityNumber;
+    private List<RoleDTO> _roleDTOList;
+
 
 //    public PersonDTO() {
 //
@@ -73,5 +77,13 @@ public class PersonDTO implements Serializable {
 
     public void setPersonID(int personID) {
         this.personID = personID;
+    }
+
+    public List<RoleDTO> getRoleDTOList() {
+        return _roleDTOList;
+    }
+
+    public void setRoleDTOList(List<RoleDTO> roleDTOList) {
+        _roleDTOList = roleDTOList;
     }
 }

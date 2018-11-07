@@ -2,6 +2,7 @@ package persistence.pojo;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 import static javax.persistence.GenerationType.IDENTITY;
@@ -55,5 +56,16 @@ public class RolePOJO {
 
     public void setRolePeopleByRoleId(Collection<RolePersonPOJO> rolePeopleByRoleId) {
         _rolePeopleByRoleId = rolePeopleByRoleId;
+    }
+
+    private List<PersonPOJO> _personsByRolePerson;
+
+    @ManyToMany(mappedBy = "roleList")
+    public List<PersonPOJO> getPersonsByRolePerson() {
+        return _personsByRolePerson;
+    }
+
+    public void setPersonsByRolePerson(List<PersonPOJO> personsByRolePerson) {
+        _personsByRolePerson = personsByRolePerson;
     }
 }
