@@ -18,6 +18,12 @@ public class TestAddRole {
         PersonDTO personDTO = new PersonDTO();
         personDTO.setPersonID(134);
         personDTO = memberDatabaseFacade.addRolesToPersonDto(personDTO);
+        RoleDTO roleDTO = new RoleDTO();
+        roleDTO.setRoleName("Player");
+        roleDTO.setRoleId(1);
+        personDTO.getRoleDTOList().add(roleDTO);
+
+
         memberDatabaseFacade.updatePerson(personDTO);
 
         for(RoleDTO role:personDTO.getRoleDTOList()) {
